@@ -1,0 +1,2016 @@
+{"frames": {
+
+"shop/bg_group1":
+{
+	"frame": {"x":426,"y":54,"w":3,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":3,"h":27},
+	"sourceSize": {"w":3,"h":27}
+},
+"shop/bg_group2":
+{
+	"frame": {"x":421,"y":54,"w":5,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":5,"h":27},
+	"sourceSize": {"w":5,"h":27}
+},
+"shop/bg_type1":
+{
+	"frame": {"x":228,"y":200,"w":3,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":3,"h":42},
+	"sourceSize": {"w":3,"h":42}
+},
+"shop/bg_type2":
+{
+	"frame": {"x":269,"y":200,"w":3,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":3,"h":42},
+	"sourceSize": {"w":3,"h":42}
+},
+"shop/bg_type_count":
+{
+	"frame": {"x":114,"y":0,"w":30,"h":15},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":15},
+	"sourceSize": {"w":30,"h":15}
+},
+"shop/btn_add":
+{
+	"frame": {"x":1300,"y":54,"w":152,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":152,"h":31},
+	"sourceSize": {"w":152,"h":31}
+},
+"shop/btn_buy":
+{
+	"frame": {"x":0,"y":85,"w":152,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":152,"h":31},
+	"sourceSize": {"w":152,"h":31}
+},
+"shop/btn_my_items":
+{
+	"frame": {"x":161,"y":54,"w":130,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":130,"h":27},
+	"sourceSize": {"w":130,"h":27}
+},
+"shop/btn_page_bg":
+{
+	"frame": {"x":213,"y":0,"w":23,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":23,"h":20},
+	"sourceSize": {"w":23,"h":20}
+},
+"shop/btn_page_left":
+{
+	"frame": {"x":144,"y":0,"w":23,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":23,"h":20},
+	"sourceSize": {"w":23,"h":20}
+},
+"shop/btn_page_right":
+{
+	"frame": {"x":190,"y":0,"w":23,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":23,"h":20},
+	"sourceSize": {"w":23,"h":20}
+},
+"shop/btn_remove":
+{
+	"frame": {"x":152,"y":85,"w":152,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":152,"h":31},
+	"sourceSize": {"w":152,"h":31}
+},
+"shop/btn_sell":
+{
+	"frame": {"x":429,"y":54,"w":152,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":152,"h":31},
+	"sourceSize": {"w":152,"h":31}
+},
+"shop/btn_set_price":
+{
+	"frame": {"x":608,"y":54,"w":199,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":199,"h":31},
+	"sourceSize": {"w":199,"h":31}
+},
+"shop/btn_shop_items":
+{
+	"frame": {"x":291,"y":54,"w":130,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":130,"h":27},
+	"sourceSize": {"w":130,"h":27}
+},
+"shop/classes/btn_class1":
+{
+	"frame": {"x":581,"y":54,"w":27,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":31},
+	"sourceSize": {"w":27,"h":31}
+},
+"shop/classes/btn_class2":
+{
+	"frame": {"x":807,"y":54,"w":27,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":31},
+	"sourceSize": {"w":27,"h":31}
+},
+"shop/classes/btn_class3":
+{
+	"frame": {"x":834,"y":54,"w":27,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":31},
+	"sourceSize": {"w":27,"h":31}
+},
+"shop/classes/btn_class4":
+{
+	"frame": {"x":1094,"y":54,"w":27,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":31},
+	"sourceSize": {"w":27,"h":31}
+},
+"shop/classes/btn_class5":
+{
+	"frame": {"x":1067,"y":54,"w":27,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":31},
+	"sourceSize": {"w":27,"h":31}
+},
+"shop/classes/btn_class6":
+{
+	"frame": {"x":1121,"y":54,"w":27,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":31},
+	"sourceSize": {"w":27,"h":31}
+},
+"shop/classes/btn_class7":
+{
+	"frame": {"x":1040,"y":54,"w":27,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":31},
+	"sourceSize": {"w":27,"h":31}
+},
+"shop/classes/btn_class_all":
+{
+	"frame": {"x":861,"y":54,"w":27,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":31},
+	"sourceSize": {"w":27,"h":31}
+},
+"shop/classes/dis_class1":
+{
+	"frame": {"x":1452,"y":54,"w":27,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":31},
+	"sourceSize": {"w":27,"h":31}
+},
+"shop/classes/dis_class2":
+{
+	"frame": {"x":199,"y":116,"w":27,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":31},
+	"sourceSize": {"w":27,"h":31}
+},
+"shop/classes/dis_class3":
+{
+	"frame": {"x":361,"y":116,"w":27,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":31},
+	"sourceSize": {"w":27,"h":31}
+},
+"shop/classes/dis_class4":
+{
+	"frame": {"x":334,"y":116,"w":27,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":31},
+	"sourceSize": {"w":27,"h":31}
+},
+"shop/classes/dis_class5":
+{
+	"frame": {"x":388,"y":116,"w":27,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":31},
+	"sourceSize": {"w":27,"h":31}
+},
+"shop/classes/dis_class6":
+{
+	"frame": {"x":307,"y":116,"w":27,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":31},
+	"sourceSize": {"w":27,"h":31}
+},
+"shop/classes/dis_class7":
+{
+	"frame": {"x":253,"y":116,"w":27,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":31},
+	"sourceSize": {"w":27,"h":31}
+},
+"shop/classes/dis_class_all":
+{
+	"frame": {"x":226,"y":116,"w":27,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":31},
+	"sourceSize": {"w":27,"h":31}
+},
+"shop/classes/over_class1":
+{
+	"frame": {"x":280,"y":116,"w":27,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":31},
+	"sourceSize": {"w":27,"h":31}
+},
+"shop/classes/over_class2":
+{
+	"frame": {"x":550,"y":116,"w":27,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":31},
+	"sourceSize": {"w":27,"h":31}
+},
+"shop/classes/over_class3":
+{
+	"frame": {"x":496,"y":116,"w":27,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":31},
+	"sourceSize": {"w":27,"h":31}
+},
+"shop/classes/over_class4":
+{
+	"frame": {"x":469,"y":116,"w":27,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":31},
+	"sourceSize": {"w":27,"h":31}
+},
+"shop/classes/over_class5":
+{
+	"frame": {"x":523,"y":116,"w":27,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":31},
+	"sourceSize": {"w":27,"h":31}
+},
+"shop/classes/over_class6":
+{
+	"frame": {"x":442,"y":116,"w":27,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":31},
+	"sourceSize": {"w":27,"h":31}
+},
+"shop/classes/over_class7":
+{
+	"frame": {"x":415,"y":116,"w":27,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":31},
+	"sourceSize": {"w":27,"h":31}
+},
+"shop/classes/over_class_all":
+{
+	"frame": {"x":1290,"y":85,"w":27,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":31},
+	"sourceSize": {"w":27,"h":31}
+},
+"shop/classes/sel_class1":
+{
+	"frame": {"x":1371,"y":85,"w":27,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":31},
+	"sourceSize": {"w":27,"h":31}
+},
+"shop/classes/sel_class2":
+{
+	"frame": {"x":1344,"y":85,"w":27,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":31},
+	"sourceSize": {"w":27,"h":31}
+},
+"shop/classes/sel_class3":
+{
+	"frame": {"x":1398,"y":85,"w":27,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":31},
+	"sourceSize": {"w":27,"h":31}
+},
+"shop/classes/sel_class4":
+{
+	"frame": {"x":1317,"y":85,"w":27,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":31},
+	"sourceSize": {"w":27,"h":31}
+},
+"shop/classes/sel_class5":
+{
+	"frame": {"x":1263,"y":85,"w":27,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":31},
+	"sourceSize": {"w":27,"h":31}
+},
+"shop/classes/sel_class6":
+{
+	"frame": {"x":1425,"y":85,"w":27,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":31},
+	"sourceSize": {"w":27,"h":31}
+},
+"shop/classes/sel_class7":
+{
+	"frame": {"x":1604,"y":85,"w":27,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":31},
+	"sourceSize": {"w":27,"h":31}
+},
+"shop/classes/sel_class_all":
+{
+	"frame": {"x":1935,"y":85,"w":27,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":31},
+	"sourceSize": {"w":27,"h":31}
+},
+"shop/dis_add":
+{
+	"frame": {"x":1783,"y":85,"w":152,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":152,"h":31},
+	"sourceSize": {"w":152,"h":31}
+},
+"shop/dis_buy":
+{
+	"frame": {"x":1111,"y":85,"w":152,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":152,"h":31},
+	"sourceSize": {"w":152,"h":31}
+},
+"shop/dis_my_items":
+{
+	"frame": {"x":1261,"y":27,"w":130,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":130,"h":27},
+	"sourceSize": {"w":130,"h":27}
+},
+"shop/dis_remove":
+{
+	"frame": {"x":1452,"y":85,"w":152,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":152,"h":31},
+	"sourceSize": {"w":152,"h":31}
+},
+"shop/dis_sell":
+{
+	"frame": {"x":1631,"y":85,"w":152,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":152,"h":31},
+	"sourceSize": {"w":152,"h":31}
+},
+"shop/dis_set_price":
+{
+	"frame": {"x":0,"y":116,"w":199,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":199,"h":31},
+	"sourceSize": {"w":199,"h":31}
+},
+"shop/dis_shop_items":
+{
+	"frame": {"x":1323,"y":0,"w":130,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":130,"h":27},
+	"sourceSize": {"w":130,"h":27}
+},
+"shop/groups/btn_armor":
+{
+	"frame": {"x":1453,"y":0,"w":83,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":83,"h":27},
+	"sourceSize": {"w":83,"h":27}
+},
+"shop/groups/btn_avatar":
+{
+	"frame": {"x":1208,"y":0,"w":115,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":115,"h":27},
+	"sourceSize": {"w":115,"h":27}
+},
+"shop/groups/btn_books":
+{
+	"frame": {"x":1536,"y":0,"w":66,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":66,"h":27},
+	"sourceSize": {"w":66,"h":27}
+},
+"shop/groups/btn_jewelry":
+{
+	"frame": {"x":1683,"y":0,"w":91,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":91,"h":27},
+	"sourceSize": {"w":91,"h":27}
+},
+"shop/groups/btn_misc":
+{
+	"frame": {"x":231,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/groups/btn_potions":
+{
+	"frame": {"x":1852,"y":0,"w":66,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":66,"h":27},
+	"sourceSize": {"w":66,"h":27}
+},
+"shop/groups/btn_resources":
+{
+	"frame": {"x":1035,"y":0,"w":90,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":90,"h":27},
+	"sourceSize": {"w":90,"h":27}
+},
+"shop/groups/btn_scrolls":
+{
+	"frame": {"x":1774,"y":0,"w":78,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":78,"h":27},
+	"sourceSize": {"w":78,"h":27}
+},
+"shop/groups/btn_tools":
+{
+	"frame": {"x":1602,"y":0,"w":81,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":81,"h":27},
+	"sourceSize": {"w":81,"h":27}
+},
+"shop/groups/btn_weapon":
+{
+	"frame": {"x":1125,"y":0,"w":83,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":83,"h":27},
+	"sourceSize": {"w":83,"h":27}
+},
+"shop/groups/dis_armor":
+{
+	"frame": {"x":952,"y":0,"w":83,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":83,"h":27},
+	"sourceSize": {"w":83,"h":27}
+},
+"shop/groups/dis_avatar":
+{
+	"frame": {"x":505,"y":0,"w":115,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":115,"h":27},
+	"sourceSize": {"w":115,"h":27}
+},
+"shop/groups/dis_books":
+{
+	"frame": {"x":439,"y":0,"w":66,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":66,"h":27},
+	"sourceSize": {"w":66,"h":27}
+},
+"shop/groups/dis_jewelry":
+{
+	"frame": {"x":282,"y":0,"w":91,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":91,"h":27},
+	"sourceSize": {"w":91,"h":27}
+},
+"shop/groups/dis_potions":
+{
+	"frame": {"x":373,"y":0,"w":66,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":66,"h":27},
+	"sourceSize": {"w":66,"h":27}
+},
+"shop/groups/dis_resources":
+{
+	"frame": {"x":620,"y":0,"w":90,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":90,"h":27},
+	"sourceSize": {"w":90,"h":27}
+},
+"shop/groups/dis_scrolls":
+{
+	"frame": {"x":791,"y":0,"w":78,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":78,"h":27},
+	"sourceSize": {"w":78,"h":27}
+},
+"shop/groups/dis_tools":
+{
+	"frame": {"x":710,"y":0,"w":81,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":81,"h":27},
+	"sourceSize": {"w":81,"h":27}
+},
+"shop/groups/dis_weapon":
+{
+	"frame": {"x":869,"y":0,"w":83,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":83,"h":27},
+	"sourceSize": {"w":83,"h":27}
+},
+"shop/groups/over_armor":
+{
+	"frame": {"x":0,"y":27,"w":83,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":83,"h":27},
+	"sourceSize": {"w":83,"h":27}
+},
+"shop/groups/over_avatar":
+{
+	"frame": {"x":149,"y":27,"w":115,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":115,"h":27},
+	"sourceSize": {"w":115,"h":27}
+},
+"shop/groups/over_books":
+{
+	"frame": {"x":1391,"y":27,"w":66,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":66,"h":27},
+	"sourceSize": {"w":66,"h":27}
+},
+"shop/groups/over_jewelry":
+{
+	"frame": {"x":1457,"y":27,"w":91,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":91,"h":27},
+	"sourceSize": {"w":91,"h":27}
+},
+"shop/groups/over_potions":
+{
+	"frame": {"x":83,"y":27,"w":66,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":66,"h":27},
+	"sourceSize": {"w":66,"h":27}
+},
+"shop/groups/over_resources":
+{
+	"frame": {"x":1548,"y":27,"w":90,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":90,"h":27},
+	"sourceSize": {"w":90,"h":27}
+},
+"shop/groups/over_scrolls":
+{
+	"frame": {"x":1753,"y":27,"w":78,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":78,"h":27},
+	"sourceSize": {"w":78,"h":27}
+},
+"shop/groups/over_tools":
+{
+	"frame": {"x":1914,"y":27,"w":81,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":81,"h":27},
+	"sourceSize": {"w":81,"h":27}
+},
+"shop/groups/over_weapon":
+{
+	"frame": {"x":0,"y":54,"w":83,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":83,"h":27},
+	"sourceSize": {"w":83,"h":27}
+},
+"shop/groups/sel_armor":
+{
+	"frame": {"x":1831,"y":27,"w":83,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":83,"h":27},
+	"sourceSize": {"w":83,"h":27}
+},
+"shop/groups/sel_avatar":
+{
+	"frame": {"x":1638,"y":27,"w":115,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":115,"h":27},
+	"sourceSize": {"w":115,"h":27}
+},
+"shop/groups/sel_books":
+{
+	"frame": {"x":1195,"y":27,"w":66,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":66,"h":27},
+	"sourceSize": {"w":66,"h":27}
+},
+"shop/groups/sel_jewelry":
+{
+	"frame": {"x":1104,"y":27,"w":91,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":91,"h":27},
+	"sourceSize": {"w":91,"h":27}
+},
+"shop/groups/sel_potions":
+{
+	"frame": {"x":345,"y":27,"w":66,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":66,"h":27},
+	"sourceSize": {"w":66,"h":27}
+},
+"shop/groups/sel_resources":
+{
+	"frame": {"x":411,"y":27,"w":90,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":90,"h":27},
+	"sourceSize": {"w":90,"h":27}
+},
+"shop/groups/sel_scrolls":
+{
+	"frame": {"x":83,"y":54,"w":78,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":78,"h":27},
+	"sourceSize": {"w":78,"h":27}
+},
+"shop/groups/sel_tools":
+{
+	"frame": {"x":264,"y":27,"w":81,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":81,"h":27},
+	"sourceSize": {"w":81,"h":27}
+},
+"shop/groups/sel_weapon":
+{
+	"frame": {"x":501,"y":27,"w":83,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":83,"h":27},
+	"sourceSize": {"w":83,"h":27}
+},
+"shop/over_add":
+{
+	"frame": {"x":888,"y":54,"w":152,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":152,"h":31},
+	"sourceSize": {"w":152,"h":31}
+},
+"shop/over_buy":
+{
+	"frame": {"x":1148,"y":54,"w":152,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":152,"h":31},
+	"sourceSize": {"w":152,"h":31}
+},
+"shop/over_my_items":
+{
+	"frame": {"x":584,"y":27,"w":130,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":130,"h":27},
+	"sourceSize": {"w":130,"h":27}
+},
+"shop/over_remove":
+{
+	"frame": {"x":456,"y":85,"w":152,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":152,"h":31},
+	"sourceSize": {"w":152,"h":31}
+},
+"shop/over_sell":
+{
+	"frame": {"x":959,"y":85,"w":152,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":152,"h":31},
+	"sourceSize": {"w":152,"h":31}
+},
+"shop/over_set_price":
+{
+	"frame": {"x":608,"y":85,"w":199,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":199,"h":31},
+	"sourceSize": {"w":199,"h":31}
+},
+"shop/over_shop_items":
+{
+	"frame": {"x":844,"y":27,"w":130,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":130,"h":27},
+	"sourceSize": {"w":130,"h":27}
+},
+"shop/sel_add":
+{
+	"frame": {"x":807,"y":85,"w":152,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":152,"h":31},
+	"sourceSize": {"w":152,"h":31}
+},
+"shop/sel_buy":
+{
+	"frame": {"x":304,"y":85,"w":152,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":152,"h":31},
+	"sourceSize": {"w":152,"h":31}
+},
+"shop/sel_my_items":
+{
+	"frame": {"x":974,"y":27,"w":130,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":130,"h":27},
+	"sourceSize": {"w":130,"h":27}
+},
+"shop/sel_page_bg":
+{
+	"frame": {"x":167,"y":0,"w":23,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":23,"h":20},
+	"sourceSize": {"w":23,"h":20}
+},
+"shop/sel_page_left":
+{
+	"frame": {"x":259,"y":0,"w":23,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":23,"h":20},
+	"sourceSize": {"w":23,"h":20}
+},
+"shop/sel_page_right":
+{
+	"frame": {"x":236,"y":0,"w":23,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":23,"h":20},
+	"sourceSize": {"w":23,"h":20}
+},
+"shop/sel_remove":
+{
+	"frame": {"x":1479,"y":54,"w":152,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":152,"h":31},
+	"sourceSize": {"w":152,"h":31}
+},
+"shop/sel_sell":
+{
+	"frame": {"x":1830,"y":54,"w":152,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":152,"h":31},
+	"sourceSize": {"w":152,"h":31}
+},
+"shop/sel_set_price":
+{
+	"frame": {"x":1631,"y":54,"w":199,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":199,"h":31},
+	"sourceSize": {"w":199,"h":31}
+},
+"shop/sel_shop_items":
+{
+	"frame": {"x":714,"y":27,"w":130,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":130,"h":27},
+	"sourceSize": {"w":130,"h":27}
+},
+"shop/txt_class":
+{
+	"frame": {"x":0,"y":0,"w":114,"h":10},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":114,"h":10},
+	"sourceSize": {"w":114,"h":10}
+},
+"shop/types/btn_amulets":
+{
+	"frame": {"x":190,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/btn_armor":
+{
+	"frame": {"x":152,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/btn_axe":
+{
+	"frame": {"x":76,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/btn_book":
+{
+	"frame": {"x":38,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/btn_boots":
+{
+	"frame": {"x":272,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/btn_bracers":
+{
+	"frame": {"x":386,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/btn_craft_alchemy":
+{
+	"frame": {"x":500,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/btn_craft_carpenter":
+{
+	"frame": {"x":576,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/btn_craft_forging":
+{
+	"frame": {"x":538,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/btn_craft_jewelry":
+{
+	"frame": {"x":462,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/btn_craft_key":
+{
+	"frame": {"x":424,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/btn_dagger":
+{
+	"frame": {"x":348,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/btn_diadems":
+{
+	"frame": {"x":310,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/btn_earrings":
+{
+	"frame": {"x":114,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/btn_food":
+{
+	"frame": {"x":0,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/btn_gem":
+{
+	"frame": {"x":1292,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/btn_hammer":
+{
+	"frame": {"x":1596,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/btn_helmet":
+{
+	"frame": {"x":1558,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/btn_leather":
+{
+	"frame": {"x":1482,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/btn_metal":
+{
+	"frame": {"x":1444,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/btn_mine":
+{
+	"frame": {"x":1368,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/btn_mine_gather":
+{
+	"frame": {"x":1330,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/btn_mine_skin":
+{
+	"frame": {"x":1634,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/btn_mine_wood":
+{
+	"frame": {"x":1748,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/btn_potions":
+{
+	"frame": {"x":1862,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/btn_potions1":
+{
+	"frame": {"x":1938,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/btn_potions2":
+{
+	"frame": {"x":1900,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/btn_ring":
+{
+	"frame": {"x":1824,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/btn_runes":
+{
+	"frame": {"x":1786,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/btn_scroll":
+{
+	"frame": {"x":1710,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/btn_scroll2":
+{
+	"frame": {"x":1672,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/btn_shield":
+{
+	"frame": {"x":614,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/btn_sword":
+{
+	"frame": {"x":728,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/btn_talismans":
+{
+	"frame": {"x":1526,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/btn_wood":
+{
+	"frame": {"x":1602,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/dis_amulets":
+{
+	"frame": {"x":1564,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/dis_armor":
+{
+	"frame": {"x":1488,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/dis_axe":
+{
+	"frame": {"x":1450,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/dis_book":
+{
+	"frame": {"x":1374,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/dis_boots":
+{
+	"frame": {"x":1336,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/dis_bracers":
+{
+	"frame": {"x":1640,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/dis_craft_alchemy":
+{
+	"frame": {"x":1754,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/dis_craft_carpenter":
+{
+	"frame": {"x":1868,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/dis_craft_forging":
+{
+	"frame": {"x":1944,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/dis_craft_jewelry":
+{
+	"frame": {"x":1906,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/dis_craft_key":
+{
+	"frame": {"x":1830,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/dis_dagger":
+{
+	"frame": {"x":1792,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/dis_diadems":
+{
+	"frame": {"x":1716,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/dis_earrings":
+{
+	"frame": {"x":1678,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/dis_food":
+{
+	"frame": {"x":1412,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/dis_gem":
+{
+	"frame": {"x":1298,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/dis_hammer":
+{
+	"frame": {"x":842,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/dis_helmet":
+{
+	"frame": {"x":918,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/dis_leather":
+{
+	"frame": {"x":880,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/dis_metal":
+{
+	"frame": {"x":804,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/dis_mine":
+{
+	"frame": {"x":766,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/dis_mine_gather":
+{
+	"frame": {"x":690,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/dis_mine_skin":
+{
+	"frame": {"x":652,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/dis_mine_wood":
+{
+	"frame": {"x":956,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/dis_potions":
+{
+	"frame": {"x":1070,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/dis_potions1":
+{
+	"frame": {"x":1184,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/dis_potions2":
+{
+	"frame": {"x":1260,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/dis_ring":
+{
+	"frame": {"x":1222,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/dis_runes":
+{
+	"frame": {"x":1146,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/dis_scroll":
+{
+	"frame": {"x":1108,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/dis_scroll2":
+{
+	"frame": {"x":1032,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/dis_shield":
+{
+	"frame": {"x":994,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/dis_sword":
+{
+	"frame": {"x":1406,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/dis_talismans":
+{
+	"frame": {"x":418,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/dis_wood":
+{
+	"frame": {"x":1451,"y":116,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/over_amulets":
+{
+	"frame": {"x":1527,"y":116,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/over_armor":
+{
+	"frame": {"x":1489,"y":116,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/over_axe":
+{
+	"frame": {"x":1413,"y":116,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/over_book":
+{
+	"frame": {"x":1375,"y":116,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/over_boots":
+{
+	"frame": {"x":1299,"y":116,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/over_bracers":
+{
+	"frame": {"x":1261,"y":116,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/over_craft_alchemy":
+{
+	"frame": {"x":1565,"y":116,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/over_craft_carpenter":
+{
+	"frame": {"x":1679,"y":116,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/over_craft_forging":
+{
+	"frame": {"x":1793,"y":116,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/over_craft_jewelry":
+{
+	"frame": {"x":1869,"y":116,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/over_craft_key":
+{
+	"frame": {"x":1831,"y":116,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/over_dagger":
+{
+	"frame": {"x":1755,"y":116,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/over_diadems":
+{
+	"frame": {"x":1717,"y":116,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/over_earrings":
+{
+	"frame": {"x":1641,"y":116,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/over_food":
+{
+	"frame": {"x":1223,"y":116,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/over_gem":
+{
+	"frame": {"x":1337,"y":116,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/over_hammer":
+{
+	"frame": {"x":1109,"y":116,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/over_helmet":
+{
+	"frame": {"x":843,"y":116,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/over_leather":
+{
+	"frame": {"x":729,"y":116,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/over_metal":
+{
+	"frame": {"x":767,"y":116,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/over_mine":
+{
+	"frame": {"x":691,"y":116,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/over_mine_gather":
+{
+	"frame": {"x":615,"y":116,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/over_mine_skin":
+{
+	"frame": {"x":653,"y":116,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/over_mine_wood":
+{
+	"frame": {"x":577,"y":116,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/over_potions":
+{
+	"frame": {"x":805,"y":116,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/over_potions1":
+{
+	"frame": {"x":995,"y":116,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/over_potions2":
+{
+	"frame": {"x":881,"y":116,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/over_ring":
+{
+	"frame": {"x":1185,"y":116,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/over_runes":
+{
+	"frame": {"x":1147,"y":116,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/over_scroll":
+{
+	"frame": {"x":1071,"y":116,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/over_scroll2":
+{
+	"frame": {"x":1033,"y":116,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/over_shield":
+{
+	"frame": {"x":957,"y":116,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/over_sword":
+{
+	"frame": {"x":919,"y":116,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/over_talismans":
+{
+	"frame": {"x":1603,"y":116,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/over_wood":
+{
+	"frame": {"x":38,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/sel_amulets":
+{
+	"frame": {"x":1907,"y":116,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/sel_armor":
+{
+	"frame": {"x":912,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/sel_axe":
+{
+	"frame": {"x":874,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/sel_book":
+{
+	"frame": {"x":798,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/sel_boots":
+{
+	"frame": {"x":760,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/sel_bracers":
+{
+	"frame": {"x":684,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/sel_craft_alchemy":
+{
+	"frame": {"x":646,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/sel_craft_carpenter":
+{
+	"frame": {"x":950,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/sel_craft_forging":
+{
+	"frame": {"x":1064,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/sel_craft_jewelry":
+{
+	"frame": {"x":1178,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/sel_craft_key":
+{
+	"frame": {"x":1254,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/sel_dagger":
+{
+	"frame": {"x":1216,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/sel_diadems":
+{
+	"frame": {"x":1140,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/sel_earrings":
+{
+	"frame": {"x":1102,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/sel_food":
+{
+	"frame": {"x":1026,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/sel_gem":
+{
+	"frame": {"x":988,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/sel_hammer":
+{
+	"frame": {"x":722,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/sel_helmet":
+{
+	"frame": {"x":608,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/sel_leather":
+{
+	"frame": {"x":152,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/sel_metal":
+{
+	"frame": {"x":228,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/sel_mine":
+{
+	"frame": {"x":190,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/sel_mine_gather":
+{
+	"frame": {"x":114,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/sel_mine_skin":
+{
+	"frame": {"x":76,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/sel_mine_wood":
+{
+	"frame": {"x":0,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/sel_potions":
+{
+	"frame": {"x":1945,"y":116,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/sel_potions1":
+{
+	"frame": {"x":266,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/sel_potions2":
+{
+	"frame": {"x":380,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/sel_ring":
+{
+	"frame": {"x":494,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/sel_runes":
+{
+	"frame": {"x":570,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/sel_scroll":
+{
+	"frame": {"x":532,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/sel_scroll2":
+{
+	"frame": {"x":456,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/sel_shield":
+{
+	"frame": {"x":836,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/sel_sword":
+{
+	"frame": {"x":304,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/sel_talismans":
+{
+	"frame": {"x":342,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+},
+"shop/types/sel_wood":
+{
+	"frame": {"x":1520,"y":158,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42}
+}},
+"animations": {
+	"shop/bg_group": ["shop/bg_group1","shop/bg_group2"],
+	"shop/bg_type": ["shop/bg_type1","shop/bg_type2"],
+	"shop/classes/btn_class": ["shop/classes/btn_class1","shop/classes/btn_class2","shop/classes/btn_class3","shop/classes/btn_class4","shop/classes/btn_class5","shop/classes/btn_class6","shop/classes/btn_class7"],
+	"shop/classes/dis_class": ["shop/classes/dis_class1","shop/classes/dis_class2","shop/classes/dis_class3","shop/classes/dis_class4","shop/classes/dis_class5","shop/classes/dis_class6","shop/classes/dis_class7"],
+	"shop/classes/over_class": ["shop/classes/over_class1","shop/classes/over_class2","shop/classes/over_class3","shop/classes/over_class4","shop/classes/over_class5","shop/classes/over_class6","shop/classes/over_class7"],
+	"shop/classes/sel_class": ["shop/classes/sel_class1","shop/classes/sel_class2","shop/classes/sel_class3","shop/classes/sel_class4","shop/classes/sel_class5","shop/classes/sel_class6","shop/classes/sel_class7"],
+	"shop/types/btn_potions": ["shop/types/btn_potions1","shop/types/btn_potions2"],
+	"shop/types/dis_potions": ["shop/types/dis_potions1","shop/types/dis_potions2"],
+	"shop/types/over_potions": ["shop/types/over_potions1","shop/types/over_potions2"],
+	"shop/types/sel_potions": ["shop/types/sel_potions1","shop/types/sel_potions2"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "shop.png",
+	"format": "RGBA8888",
+	"size": {"w":1995,"h":242},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:99235e5954e61119d72f699727e7adce:4b4606617527f163601dea8dbcfa23b1:9b474ecad0a68c8690698c029d1f12b5$"
+}
+}
