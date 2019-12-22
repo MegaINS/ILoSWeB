@@ -17,19 +17,12 @@
     }
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="ru">
     <head>  
         <meta charset="utf-8">
         <title>"Ilos!</title>
         <link rel="stylesheet" media="screen" href="assets/css/game.css">
-<!--        <script src="js/lib/socket.io.js" type = "text/javascript"></script>-->
-       <?php //$a = rand(); echo "?myparam=$a"; ;?>
-<!--
-        <script  src="/js/lib/pixi.js"></script>
-         <script type="module" src="/js/game.js"></script>
--->
-         <script src="/assets/js/lib/require.js" data-main="/assets/js/config.js"></script>
-
+        <script src="dist/app.js"></script>
     </head>
     <body>
 

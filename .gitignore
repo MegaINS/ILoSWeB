@@ -17,4 +17,8 @@ assets/img/gui/scroll
 assets/img/gui/status
 assets/img/gui/userInfo
 assets/img/danges
+node_modules/*
+dist/
+
+
 
