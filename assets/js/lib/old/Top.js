@@ -1,4 +1,4 @@
-define(['Resources','Button'],function (Resources, Button) {
+define(['assets/js/Resources','assets/js/lib/old/Button'],function (Resources, Button) {
 
     class Top {
 

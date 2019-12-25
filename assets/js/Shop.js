@@ -1,4 +1,4 @@
-define(['Resources','Button'],function (Resources,Button) {
+define(['Resources','assets/js/lib/old/Button'],function (Resources, Button) {
 
     class Shop{
         constructor() {

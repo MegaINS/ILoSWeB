@@ -35,10 +35,10 @@ function init(loader, resources) {
         "socket.io",
         "moment",
         'jquery',
-        "Gui",
-        "Button",
+        "assets/js/lib/old/Gui",
+        "assets/js/lib/old/Button",
         "Resources",
-        'location'
+        'assets/js/lib/old/Location'
     ], function (pixiUi,
                  io,
                  moment,

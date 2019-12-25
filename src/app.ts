@@ -3,9 +3,11 @@ import {Gui} from "./Gui";
 import LoaderResource = PIXI.LoaderResource;
 import Loader = PIXI.Loader;
 import {Resources} from "./Resources";
+import {Network} from "./Network";
+import {Player} from "./Player";
 
 window.onload = () => {
-    var game = new ILoSGame();
+    let game = new ILoSGame();
     game.load();
 };
 
@@ -14,9 +16,10 @@ export class ILoSGame {
 
     app: PIXI.Application;
     gui: Gui;
+    network:Network;
     CANVAS_HEIGHT: number = 650;
     CANVAS_WIDTH: number = window.innerWidth;
-
+    player: Player;
 
     load = () => {
         PIXI.Loader.shared
@@ -28,6 +31,8 @@ export class ILoSGame {
             .add('itemLayers', '/assets/img/json/itemLayers.json')
             .add('danges', '/assets/img/json/danges.json')
             .add('shop', '/assets/img/json/shop.json')
+            .add('top', '/assets/img/json/top.json')
+
             .load(this.init);
 
     };
@@ -42,7 +47,11 @@ export class ILoSGame {
         });
         document.body.appendChild(this.app.view);
 
+        this.player = new Player();
+
         this.gui = new Gui(this);
+
+        this.network = new Network(this);
 
         this.update()
     };
@@ -51,4 +60,5 @@ export class ILoSGame {
         this.app.renderer.render(this.app.stage);
         requestAnimationFrame(this.update);
     }
+
 }

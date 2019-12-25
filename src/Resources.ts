@@ -3,9 +3,10 @@ import Loader = PIXI.Loader;
 import LoaderResource = PIXI.LoaderResource;
 
 
-export class Resources {
+export abstract class Resources {
 
     static top;
+    static status;
 
     static load(loader: Loader, resources: Partial<Record<string, LoaderResource>>) {
 
@@ -17,48 +18,70 @@ export class Resources {
         let itemLayers = resources['itemLayers'];
         let danges = resources['danges'];
         let shop = resources['shop'];
+        let top = resources['top'];
 
-        const basePath = '/assets/img/';
         this.top = {
-            bg: PIXI.Texture.from(basePath + 'gui/top/bg.png'),
-            bg_title_1: PIXI.Texture.from(basePath + 'gui/top/bg_title_1.png'),
-            bg_title_2: PIXI.Texture.from(basePath + 'gui/top/bg_title_2.png'),
-            bg_title_3: PIXI.Texture.from(basePath + 'gui/top/bg_title_3.png'),
+            bg: top.textures['top/bg'],
+            bg_title_1: top.textures['top/bg_title_1'],
+            bg_title_2: top.textures['top/bg_title_2'],
+            bg_title_3: top.textures['top/bg_title_3'],
 
             info: {
-                btn: PIXI.Texture.from(basePath + 'gui/top/btn_info.png'),
-                over: PIXI.Texture.from(basePath + 'gui/top/over_info.png'),
-                sel: PIXI.Texture.from(basePath + 'gui/top/sel_info.png'),
-                dis: PIXI.Texture.from(basePath + 'gui/top/dis_info.png')
+                btn: top.textures['top/btn_info'],
+                over: top.textures['top/over_info'],
+                sel: top.textures['top/sel_info'],
+                dis: top.textures['top/dis_info']
             },
             inventory: {
-                btn: PIXI.Texture.from(basePath + 'gui/top/btn_inventory.png'),
-                over: PIXI.Texture.from(basePath + 'gui/top/over_inventory.png'),
-                sel: PIXI.Texture.from(basePath + 'gui/top/sel_inventory.png'),
-                dis: PIXI.Texture.from(basePath + 'gui/top/dis_inventory.png')
+                btn: top.textures['top/btn_inventory'],
+                over: top.textures['top/over_inventory'],
+                sel: top.textures['top/sel_inventory'],
+                dis: top.textures['top/dis_inventory']
             },
             profile: {
-                btn: PIXI.Texture.from(basePath + 'gui/top/btn_profile.png'),
-                over: PIXI.Texture.from(basePath + 'gui/top/over_profile.png'),
-                sel: PIXI.Texture.from(basePath + 'gui/top/sel_profile.png'),
-                dis: PIXI.Texture.from(basePath + 'gui/top/dis_profile.png')
+                btn: top.textures['top/btn_profile'],
+                over: top.textures['top/over_profile'],
+                sel: top.textures['top/sel_profile'],
+                dis: top.textures['top/dis_profile']
             },
             log: {
-                btn: PIXI.Texture.from(basePath + 'gui/top/btn_log.png'),
-                over: PIXI.Texture.from(basePath + 'gui/top/over_log.png'),
-                sel: PIXI.Texture.from(basePath + 'gui/top/sel_log.png'),
-                dis: PIXI.Texture.from(basePath + 'gui/top/dis_log.png')
+                btn: top.textures['top/btn_log'],
+                over: top.textures['top/over_log'],
+                sel: top.textures['top/sel_log'],
+                dis: top.textures['top/dis_log']
             },
             close: {
-                btn: PIXI.Texture.from(basePath + 'gui/top/btn_close.png'),
-                over: PIXI.Texture.from(basePath + 'gui/top/over_close.png'),
-                sel: PIXI.Texture.from(basePath + 'gui/top/sel_close.png'),
-                dis: PIXI.Texture.from(basePath + 'gui/top/dis_close.png')
+                btn: top.textures['top/btn_close'],
+                over: top.textures['top/over_close'],
+                sel: top.textures['top/sel_close'],
+                dis: top.textures['top/dis_close']
             },
+        };
 
+        this.status = {
+            bg_attrs: status.textures['bg_attrs.png'],
+            bg_items2: status.textures['bg_items2.png'],
+            bg_stats: status.textures['bg_stats.png'],
 
-        }
-
+            enter: {
+                btn: status.textures['btn_enter.gif'],
+                over: status.textures['over_enter.gif'],
+                sel: status.textures['sel_enter.gif'],
+                dis: status.textures['dis_enter.gif']
+            },
+            rest: {
+                btn: status.textures['btn_rest.gif'],
+                over: status.textures['over_rest.gif'],
+                sel: status.textures['sel_rest.gif'],
+                dis: status.textures['dis_rest.gif']
+            },
+            center: {
+                btn: status.textures['btn_center.png'],
+                over: status.textures['over_center.png'],
+                sel: status.textures['sel_center.png'],
+                dis: status.textures['dis_center.png']
+            }
+        };
 
     }
 

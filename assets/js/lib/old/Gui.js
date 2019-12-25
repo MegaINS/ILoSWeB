@@ -1,4 +1,4 @@
-define(['Status','Top','UserInfo','Shop'],function (Status, Top,UserInfo,Shop) {
+define(['assets/js/lib/old/Status','assets/js/lib/old/Top','UserInfo','Shop'],function (Status, Top, UserInfo, Shop) {
     class Gui {
 
         constructor() {
