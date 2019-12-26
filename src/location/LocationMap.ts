@@ -1,6 +1,6 @@
 import {Location} from "./Location";
 import {Resources} from "../Resources";
-
+import * as PIXI from 'pixi.js'
 
 export class LocationMap extends Location {
 
@@ -8,7 +8,7 @@ export class LocationMap extends Location {
     constructor(scr, warps) {
         super(warps);
 
-        let loc;// = Resources.location.get(scr);
+        let loc = Resources.location.get(scr);
 
         let locSpr = new PIXI.Sprite(loc);
 

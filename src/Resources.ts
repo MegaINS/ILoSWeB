@@ -7,6 +7,14 @@ export abstract class Resources {
 
     static top;
     static status;
+    static player;
+    static warp;
+    static enemy;
+    static bg;
+    static location;
+    static cursor;
+    static danges;
+    static resources;
 
     static load(loader: Loader, resources: Partial<Record<string, LoaderResource>>) {
 
@@ -19,6 +27,18 @@ export abstract class Resources {
         let danges = resources['danges'];
         let shop = resources['shop'];
         let top = resources['top'];
+        const basePath = '/assets/img/';
+
+        this.player = PIXI.Texture.from(basePath + 'players/player-1.png');
+        this.warp = PIXI.Texture.from(basePath + 'danges/danges/danges-46.png');
+        this.enemy = PIXI.Texture.from(basePath + 'players/enemy-0.png');
+        this.bg = PIXI.Texture.from(basePath + 'gui/bg.gif');
+
+        this.location = new Map([["antiria", PIXI.Texture.from(basePath + 'levels/antiria/antiria.png')]]);
+
+        this.cursor = [
+            PIXI.Texture.from(basePath + 'gui/cursor-0.gif'),
+            PIXI.Texture.from(basePath + 'gui/pointer.gif')];
 
         this.top = {
             bg: top.textures['top/bg'],
@@ -83,6 +103,37 @@ export abstract class Resources {
             }
         };
 
+        this.danges = {
+            forest: [],
+            mine: [],
+            meadow: [],
+        };
+
+        for (let name in Resources.danges) {
+            let dang = Resources.danges[name];
+
+            for (let i = 0; i < 3; i++) {
+                dang[i] = {full: [], paths: []};
+                for (let j = 0; j < 7; j++) {
+                    dang[i].full[j] = danges.textures[name + '/CLASS_' + i + '/full_' + j];
+                }
+                for (let j = 0; j < 16; j++) {
+                    dang[i].paths[j] = danges.textures[name + '/CLASS_' + i + '/paths_' + j];
+                }
+            }
+        }
+        this.resources =[];
+        this.resources['materials-30'] =  PIXI.Texture.from(basePath + 'danges/mine_resources/met_rusty_iron1.png');
+        this.resources['materials-23'] =  PIXI.Texture.from(basePath + 'danges/mine_resources/met_ironite1.png');
+        this.resources['materials-29'] =  PIXI.Texture.from(basePath + 'danges/mine_resources/met_copper1.png');
+
+        this.resources['materials-18'] =  PIXI.Texture.from(basePath + 'danges/mine_resources/skin_rabbit1.png');
+        this.resources['materials-92'] =  PIXI.Texture.from(basePath + 'danges/mine_resources/skin_deer1.png');
+        this.resources['materials-80'] =  PIXI.Texture.from(basePath + 'danges/mine_resources/skin_boar1.png');
+
+        this.resources['materials-49'] =  PIXI.Texture.from(basePath + 'danges/mine_resources/wood_bad_topol1.png');
+        this.resources['materials-5'] =  PIXI.Texture.from(basePath + 'danges/mine_resources/wood_yasen1.png');
+        this.resources['materials-2'] =  PIXI.Texture.from(basePath + 'danges/mine_resources/wood_osina1.png');
     }
 
 

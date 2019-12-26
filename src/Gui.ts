@@ -11,7 +11,7 @@ export class Gui {
     constructor(game: ILoSGame) {
         this.top = new Top(game);
        // this.userInfo = new UserInfo();
-        this.status = new Status(game.player);
+        this.status = new Status(game);
         this.status.y = 30;
 
         game.app.stage.addChild(this.top,this.status);

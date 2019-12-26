@@ -1,5 +1,6 @@
 import * as PIXI from 'pixi.js'
 import {Resources} from "../Resources";
+import {Network} from "../Network";
 
 export abstract class Location extends PIXI.Container{
 
@@ -18,21 +19,22 @@ export abstract class Location extends PIXI.Container{
         this.zIndex = -1;
         this.interactive = true;
 
-        this.cursor = new PIXI.Sprite(/*Resources.cursor[1]*/);
+        this.cursor = new PIXI.Sprite(Resources.cursor[1]);
         this.cursor.zIndex = 9;
     }
 
     click = (event) => {
 
         const pos = event.data.getLocalPosition(this);
-        // sendPacket('action', {
-        //     action: 'CLICK',
-        //     data: [
-        //         Math.floor(pos.x / this.sizeTile),
-        //         Math.floor(pos.y / this.sizeTile)
-        //     ]
-        // });
+        Network.sendPacket('action', {
+            action: 'CLICK',
+            data: [
+                Math.floor(pos.x / this.tileSize),
+                Math.floor(pos.y / this.tileSize)
+            ]
+        });
     };
+
 
     rightup = () => {
         this.dragging = false;
@@ -79,7 +81,7 @@ export abstract class Location extends PIXI.Container{
 
 
     spawnEnemy(id, x, y) {
-        let enemy = new PIXI.Sprite(/*Resources.enemy*/);
+        let enemy = new PIXI.Sprite(Resources.enemy);
         enemy.x = x * this.tileSize + 15;
         enemy.y = y * this.tileSize - 15;
         this.enemys[id] = enemy;
@@ -105,6 +107,10 @@ export abstract class Location extends PIXI.Container{
             }
         }
         return false;
+    }
+
+    update(x:number,y:number):void{
+
     }
 
 }

@@ -1,17 +1,21 @@
 import * as PIXI from 'pixi.js'
 import {Resources} from "./Resources";
 import {Button} from "./Button";
+import {Player} from "./Player";
+import {ILoSGame} from "./app";
+import {Network} from "./Network";
 
 
 export class Status extends PIXI.Container {
 
     dragging: boolean;
     pos: PIXI.Point;
-    player;
+    game:ILoSGame;
     textFields:PIXI.Text[] = [];
-    constructor(player:any) {
+    bEnter;
+    constructor(game:ILoSGame) {
         super();
-        this.player = player;
+        this.game = game;
         this.interactive = true;
 
         let bg_attrs = new PIXI.Sprite(Resources.status.bg_attrs);
@@ -32,11 +36,11 @@ export class Status extends PIXI.Container {
         });
         bCenter.setTransform(70, 235);
 
-        let bEnter = new Button(Resources.status.enter, () => {/*sendPacket('action', {action: 'ENTER'})*/
+        this.bEnter = new Button(Resources.status.enter, () => {Network.sendPacket('action', {action: 'ENTER'})
         });
-        bEnter.setTransform(8, 230);
+        this.bEnter.setTransform(8, 230);
 
-        this.addChild(bEnter, bRest, bCenter);
+        this.addChild(this.bEnter, bRest, bCenter);
 
 
         const style = new PIXI.TextStyle({
@@ -105,10 +109,10 @@ export class Status extends PIXI.Container {
     update() {
 
         for (let i in this.textFields) {
-            this.textFields[i].text = this.player[i]
+            this.textFields[i].text = this.game.player[i]
         }
 
-        // this.bEnter.state(loc.playerIsInWarp())
+        this.bEnter.state(this.game.location.playerIsInWarp(this.game.player))
     }
 
 
@@ -118,12 +122,12 @@ export class Status extends PIXI.Container {
 
     mousedown = (event) => {
         this.dragging = true;
-        this.pos = event.player.getLocalPosition(this.parent);
+        this.pos = event.data.getLocalPosition(this.parent);
     };
 
     mousemove = (event) => {
         if (this.dragging) {
-            const newPos = event.player.getLocalPosition(this.parent);
+            const newPos = event.data.getLocalPosition(this.parent);
             this.x -= Math.round(this.pos.x - newPos.x);
             this.y -= Math.round(this.pos.y - newPos.y);
             this.pos = newPos;

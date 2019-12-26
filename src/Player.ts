@@ -1,5 +1,10 @@
+import {Resources} from "./Resources";
+import * as PIXI from 'pixi.js'
 
+export class Player extends PIXI.Sprite{
 
-export class Player {
+    constructor() {
+        super(Resources.player);
+    }
 
 }

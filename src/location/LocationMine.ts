@@ -1,24 +1,26 @@
 import {Location} from "./Location";
 import {Resources} from "../Resources";
+import * as PIXI from 'pixi.js'
 
 
-
-export  class LocationMine extends Location {
+export class LocationMine extends Location {
 
     tileSize: number = 102;
-    width ;
-    height ;
+    widthLoc:number = 0;
+    heightLoc:number = 0 ;
     tile ;
     resources ;
     sprites;
+    area ;
 
-    constructor(width, height, warps, tile, resources) {
+    constructor(width, height, warps, tile, resources,area) {
         super(warps);
 
-        this.width = width;
-        this.height = height;
+        this.widthLoc = width;
+        this.heightLoc = height;
         this.tile = tile;
         this.resources = resources;
+        this.area = area;
         this.sprites = [];
 
         const style = new PIXI.TextStyle({
@@ -28,8 +30,8 @@ export  class LocationMine extends Location {
             align: "center"
         });
 
-        for (let i = 0; i < width; i += 1) {
-            for (let j = 0; j < height; j += 1) {
+        for (let i = 0; i < width; i ++) {
+            for (let j = 0; j < height; j ++) {
 
                 let sprite = new PIXI.Sprite();
                 this.sprites[i + j * height] = sprite;
@@ -46,7 +48,7 @@ export  class LocationMine extends Location {
 
         for (let i = 0; i < this.warps.length; i += 1) {
             let warp = this.warps[i];
-            let sprite = new PIXI.Sprite(/*Resources.warp*/);
+            let sprite = new PIXI.Sprite(Resources.warp);
             sprite.setTransform(warp.x * 102,warp.y * 102);
             this.addChild(sprite);
 
@@ -54,7 +56,7 @@ export  class LocationMine extends Location {
 
         for (let i = 0; i < this.resources.length; i += 1) {
             let resource = this.resources[i];
-            let sprite = new PIXI.Sprite(/*Resources.resources[resource.scr]*/);
+            let sprite = new PIXI.Sprite(Resources.resources[resource.scr]);
             sprite.setTransform(resource.x * 102,resource.y * 102);
             resource.sprite = sprite;
             this.addChild(sprite);
@@ -64,14 +66,14 @@ export  class LocationMine extends Location {
 
     update(x, y) {
 
-        this.tile[x + y * this.height] = 0;
+        this.tile[x + y * this.heightLoc] = 0;
 
         this.setSpriteTex(x, y);
-        if (x - 1 > -1 && this.tile[x-1 + y * this.height] === 0 ) this.setSpriteTex(x - 1, y);
+        if (x - 1 > -1 && this.tile[x-1 + y * this.heightLoc] === 0 ) this.setSpriteTex(x - 1, y);
 
-        if (x + 1 < this.width && this.tile[x+1 + y * this.height] === 0) this.setSpriteTex(x + 1, y);
-        if (y - 1 > -1 && this.tile[x + (y-1) * this.height] === 0) this.setSpriteTex(x, y - 1);
-        if (y + 1 < this.height && this.tile[x + (y+1) * this.height] === 0) this.setSpriteTex(x, y + 1);
+        if (x + 1 < this.widthLoc && this.tile[x+1 + y * this.heightLoc] === 0) this.setSpriteTex(x + 1, y);
+        if (y - 1 > -1 && this.tile[x + (y-1) * this.heightLoc] === 0) this.setSpriteTex(x, y - 1);
+        if (y + 1 < this.heightLoc && this.tile[x + (y+1) * this.heightLoc] === 0) this.setSpriteTex(x, y + 1);
 
         let resource = this.resources.find(r => r.x === x && r.y === y);
         if (resource != null) {
@@ -80,21 +82,24 @@ export  class LocationMine extends Location {
         }
     }
 
-    setSpriteTex(x, y) {
-        let isFullCenter = this.tile[x + y * this.height] > 0;
+    setSpriteTex = (x, y)=> {
+        let isFullCenter = this.tile[x + y * this.heightLoc] > 0;
         let tex;
         if (isFullCenter) {
-            tex; //= //Resources.danges[this.area][0].full[getRandomInt(0, Resources.danges[this.area][0].full.length)];
+            tex = Resources.danges[this.area][0].full[this.getRandomInt(0, Resources.danges[this.area][0].full.length)];
         } else {
-            let isFullUp = this.tile[x + (y - 1) * this.height] == 0;
-            let isFullDown = this.tile[x + (y + 1) * this.height] == 0;
-            let isFullLeft = this.tile[(x - 1) + y * this.height] == 0;
-            let isFullRight = this.tile[(x + 1) + y * this.height] == 0;
+            let isFullUp = this.tile[x + (y - 1) * this.heightLoc] == 0;
+            let isFullDown = this.tile[x + (y + 1) * this.heightLoc] == 0;
+            let isFullLeft = this.tile[(x - 1) + y * this.heightLoc] == 0;
+            let isFullRight = this.tile[(x + 1) + y * this.heightLoc] == 0;
 
             let index = (isFullUp ? 8 : 0) + (isFullDown ? 4 : 0) + (isFullLeft ? 2 : 0) + (isFullRight ? 1 : 0);
 
-            tex;// = Resources.danges[this.area][0].paths[index];
+            tex = Resources.danges[this.area][0].paths[index];
         }
-        this.sprites[x + y * this.height].texture = tex;
+        this.sprites[x + y * this.heightLoc].texture = tex;
+    };
+    getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
     }
 }

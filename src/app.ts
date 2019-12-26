@@ -5,6 +5,7 @@ import Loader = PIXI.Loader;
 import {Resources} from "./Resources";
 import {Network} from "./Network";
 import {Player} from "./Player";
+import {Location} from "./location/Location";
 
 window.onload = () => {
     let game = new ILoSGame();
@@ -16,10 +17,10 @@ export class ILoSGame {
 
     app: PIXI.Application;
     gui: Gui;
-    network:Network;
     CANVAS_HEIGHT: number = 650;
     CANVAS_WIDTH: number = window.innerWidth;
     player: Player;
+    location: Location;
 
     load = () => {
         PIXI.Loader.shared
@@ -45,13 +46,14 @@ export class ILoSGame {
             width: this.CANVAS_WIDTH,
             height: this.CANVAS_HEIGHT
         });
+        this.app.stage.sortableChildren = true;
         document.body.appendChild(this.app.view);
 
         this.player = new Player();
 
         this.gui = new Gui(this);
 
-        this.network = new Network(this);
+        Network.connect(this);
 
         this.update()
     };
@@ -60,5 +62,6 @@ export class ILoSGame {
         this.app.renderer.render(this.app.stage);
         requestAnimationFrame(this.update);
     }
+
 
 }
