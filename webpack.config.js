@@ -1,5 +1,6 @@
 const path = require('path');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+const webpack = require("webpack");
 
 module.exports = {
     entry: './src/app.ts',
@@ -17,8 +18,10 @@ module.exports = {
         new BrowserSyncPlugin({
             host: 'localhost',
             port: 3000,
-            proxy: 'http://ilos.local/',
-
+            proxy: 'http://ilos.local/'
+        }),
+        new webpack.ProvidePlugin({
+            'PIXI': 'pixi.js',
         })
     ],
 

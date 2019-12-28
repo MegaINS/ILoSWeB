@@ -1,4 +1,4 @@
-import * as PIXI from "pixi.js";
+import '../lib/pixi-ui'
 import {Gui} from "./Gui";
 import LoaderResource = PIXI.LoaderResource;
 import Loader = PIXI.Loader;
@@ -6,6 +6,7 @@ import {Resources} from "./Resources";
 import {Network} from "./Network";
 import {Player} from "./Player";
 import {Location} from "./location/Location";
+
 
 window.onload = () => {
     let game = new ILoSGame();

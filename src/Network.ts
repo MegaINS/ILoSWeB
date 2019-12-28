@@ -23,7 +23,7 @@ export class Network {
         this.socket.on('playerUpdate', this.playerUpdate);
         this.socket.on('enemyUpdate', this.enemyUpdate);
         this.socket.on('locUpdate', this.locUpdate);
-
+        this.socket.on('loadPlayerInventory', this.loadPlayerInventory);
     }
 
 
@@ -94,7 +94,6 @@ export class Network {
                 break;
             case "MOVE":
                 this.game.location.moveEnemy(data.id, data.x, data.y);
-               // this.game.gui.update();
                 break;
             case "REMOVE":
                 this.game.location.removeEnemy(data.id);
@@ -104,13 +103,17 @@ export class Network {
         }
     };
 
+
+
+
     private locUpdate =(data) =>{
         console.log('<span class="username-msg">LocUpdate:</span> ' + data.x + ' ' + data.y);
        // output('<span class="username-msg">LocUpdate:</span> ' + data.x + ' ' + data.y);
         this.game.location.update(data.x, data.y)
     };
-
-
+    private loadPlayerInventory =(data) =>{
+        this.game.gui.userInfo.sections.inventory.loadItems(data.items)
+    };
 
 
 

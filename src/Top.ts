@@ -28,16 +28,16 @@ export class Top extends PIXI.Container {
         buttons.x = 3;
 
         let bProfile = new Button(Resources.top.profile, () => {
-            /*game.gui.userInfo.show('profile')*/
+            game.gui.userInfo.show('profile')
         });
         let bInventory = new Button(Resources.top.inventory, () => {
-            /*game.gui.userInfo.show('inventory')*/
+            game.gui.userInfo.show('inventory')
         });
         let bLog = new Button(Resources.top.log, () => {
-            /*game.gui.userInfo.show('log')*/
+            game.gui.userInfo.show('log')
         });
         let bInfo = new Button(Resources.top.info, () => {
-            /*game.gui.userInfo.show('info')*/
+            game.gui.userInfo.show('info')
         });
         let bClose = new Button(Resources.top.close, () => {
             document.location.href = "/logout.php";
