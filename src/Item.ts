@@ -4,8 +4,10 @@ export class Item extends PIXI.UI.Container{
 
     bgClass;
     textureBg;
+    id;
     constructor(item) {
         super(360,58);
+        this.id = item.id;
         this.interactive = true;
         this.textureBg = Resources.itemList.bg_class[item.itemClass];
 

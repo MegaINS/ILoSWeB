@@ -23,6 +23,7 @@ declare namespace PIXI.UI {
     // NOTE: Only constructor. If functions use, write definitions!
     class ScrollingContainer extends PIXI.Container {
         constructor(options: any);
+        innerContainer: any;
     }
 
     // NOTE: Only constructor. If functions use, write definitions!

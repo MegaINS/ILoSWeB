@@ -3,6 +3,7 @@ import {ILoSGame} from "./app";
 import {LocationMine} from "./location/LocationMine";
 import {LocationHab} from "./location/LocationHab";
 import {LocationMap} from "./location/LocationMap";
+import {Shop} from "./shop/Shop";
 
 
 export class Network {
@@ -24,6 +25,8 @@ export class Network {
         this.socket.on('enemyUpdate', this.enemyUpdate);
         this.socket.on('locUpdate', this.locUpdate);
         this.socket.on('loadPlayerInventory', this.loadPlayerInventory);
+
+        this.socket.on('shopLoad', this.shopLoad);
     }
 
 
@@ -112,11 +115,17 @@ export class Network {
         this.game.location.update(data.x, data.y)
     };
     private loadPlayerInventory =(data) =>{
-        this.game.gui.userInfo.sections.inventory.loadItems(data.items)
+        this.game.gui.userInfo.sections.inventory.loadItems(data.items);
+        if( this.game.gui.shop!= null){
+            this.game.gui.shop.loadItems(data.items);
+        }
     };
 
 
 
+    private shopLoad = (data)=>{
+        this.game.gui.openShop(new Shop(this.game,data));
+    };
 
     static connect(game) {
         if(Network.network == null){

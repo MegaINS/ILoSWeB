@@ -394,6 +394,9 @@ export abstract class Resources {
 
             bg_group1: shop.textures['shop/bg_group1'],
             bg_group2: shop.textures['shop/bg_group2'],
+            bg_type1: shop.textures['shop/bg_type1'],
+            bg_type2: shop.textures['shop/bg_type2'],
+
             bg_type_count: shop.textures['shop/bg_type_count'],
             buttonSell: {
                 btn: shop.textures['shop/btn_sell'],
@@ -435,6 +438,19 @@ export abstract class Resources {
                     sel: shop.textures['shop/types/sel_book'],
                     dis: shop.textures['shop/types/dis_book'],
                 },
+                craft_forging: {
+                    btn: shop.textures['shop/types/btn_craft_forging'],
+                    over: shop.textures['shop/types/over_craft_forging'],
+                    sel: shop.textures['shop/types/sel_craft_forging'],
+                    dis: shop.textures['shop/types/dis_craft_forging'],
+                },
+                mine: {
+                    btn: shop.textures['shop/types/btn_mine'],
+                    over: shop.textures['shop/types/over_mine'],
+                    sel: shop.textures['shop/types/sel_mine'],
+                    dis: shop.textures['shop/types/dis_mine'],
+                },
+
 
             }
         };
