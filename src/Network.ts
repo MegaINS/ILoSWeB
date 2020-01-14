@@ -46,11 +46,6 @@ export class Network {
 
        // output('<span class="username-msg">LocationUpdate:</span> ' + data.locationType);
 
-        if ( this.game.location != null) {
-            this.game.app.stage.removeChild(this.game.location);
-            this.game.location.destroy();
-        }
-
         let location;
         switch (data.locationType) {
             case "OPEN":
@@ -66,8 +61,7 @@ export class Network {
                 console.log(data.locationType);
         }
 
-        this.game.app.stage.addChild(location);
-        this.game.location = location;
+        this.game.gui.setLocation(location);
     };
 
     private playerUpdate =(data) =>{
@@ -76,10 +70,10 @@ export class Network {
 
         switch (data.action) {
             case "SPAWN":
-                this.game.location.spawn(this.game.player, data.x, data.y);
+                this.game.gui.location.spawn(this.game.player, data.x, data.y);
                 break;
             case "MOVE":
-                this.game.location.move(this.game.player, data.x, data.y);
+                this.game.gui.location.move(this.game.player, data.x, data.y);
                 break;
             default:
                 console.log(data.action);
@@ -91,19 +85,22 @@ export class Network {
         console.log('<span class="username-msg">EnemyUpdate:</span> ' + data.action);
        // output('<span class="username-msg">EnemyUpdate:</span> ' + data.action);
 
-        switch (data.action) {
-            case "SPAWN":
-                this.game.location.spawnEnemy(data.id, data.x, data.y);
-                break;
-            case "MOVE":
-                this.game.location.moveEnemy(data.id, data.x, data.y);
-                break;
-            case "REMOVE":
-                this.game.location.removeEnemy(data.id);
-                break;
-            default:
-                console.log(data.action);
-        }
+      if( this.game.gui.location != null) {
+          switch (data.action) {
+              case "SPAWN":
+                  this.game.gui.location.spawnEnemy(data.id, data.x, data.y);
+                  break;
+              case "MOVE":
+                  this.game.gui.location.moveEnemy(data.id, data.x, data.y);
+                  break;
+              case "REMOVE":
+                  this.game.gui.location.removeEnemy(data.id);
+                  break;
+              default:
+                  console.log(data.action);
+          }
+      }
+
     };
 
 
@@ -112,9 +109,10 @@ export class Network {
     private locUpdate =(data) =>{
         console.log('<span class="username-msg">LocUpdate:</span> ' + data.x + ' ' + data.y);
        // output('<span class="username-msg">LocUpdate:</span> ' + data.x + ' ' + data.y);
-        this.game.location.update(data.x, data.y)
+        this.game.gui.location.update(data.x, data.y)
     };
     private loadPlayerInventory =(data) =>{
+        this.game.player.items = data.items;
         this.game.gui.userInfo.sections.inventory.loadItems(data.items);
         if( this.game.gui.shop!= null){
             this.game.gui.shop.loadItems(data.items);

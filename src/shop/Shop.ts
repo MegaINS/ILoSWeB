@@ -4,6 +4,7 @@ import {Button} from "../Button";
 import {Groups} from "./Groups";
 import {Network} from "../Network";
 import {Item} from "../Item";
+import {Question} from "../Question";
 
 
 export  class Shop  extends PIXI.Container{
@@ -14,8 +15,10 @@ export  class Shop  extends PIXI.Container{
     containerShop;
     scrollingContainer;
     itemSelected;
+    game;
     constructor(game:ILoSGame,data) {
         super();
+        this.game = game;
         this.groups ={};
         for(let i in data.groups){
            let group = data.groups[i];
@@ -32,16 +35,23 @@ export  class Shop  extends PIXI.Container{
         this.initMyInventory();
         this.initShopInventory();
 
+        this.loadItems(this.game.player.items);
+        let bEnter = new Button(Resources.status.enter, () => {Network.sendPacket('action', {action: 'ENTER'})
+        });
+
+        bEnter.setTransform(800, 30);
+
+        this.addChild(bEnter);
 
         game.app.stage.addChild(this);
 
     }
 
     initMyInventory(){
-        let bgScroll = new PIXI.TilingSprite(Resources.userInfo.profile.skillList.bg, 370, 420);
-        bgScroll.x = 31;
-        bgScroll.y = 21;
 
+        let bgScroll = new PIXI.TilingSprite(Resources.userInfo.profile.skillList.bg, 370, 420);
+        bgScroll.x = 30;
+        bgScroll.y = 20;
 
         this.scrollingContainer = new PIXI.UI.ScrollingContainer({
             width: 370,
@@ -109,12 +119,16 @@ export  class Shop  extends PIXI.Container{
 
         let bBuy = new Button(Resources.shop.buttonBuy, () => {
             if(this.currentGroup.currentType.itemSelected!=null){
-                Network.sendPacket('action', {
-                    action: 'BUY_ITEM',
-                    data: [
-                        this.currentGroup.currentType.itemSelected.id,
-                        (Math.random() * 5) + 1]
-                });
+               let quest = new Question("Quest",'1',this);
+                quest.act = ()=>{
+                    Network.sendPacket('action', {
+                        action: 'BUY_ITEM',
+                        data: [
+                            this.currentGroup.currentType.itemSelected.id,
+                            quest.value]
+                    })};
+                quest.setTransform(300,200);
+                this.addChild(quest);
             }
         });
         bBuy.x = 40;
@@ -198,7 +212,7 @@ export  class Shop  extends PIXI.Container{
 
 
 
-    }
+    };
 
 
     showGroup=(name:string)=>{
@@ -210,30 +224,33 @@ export  class Shop  extends PIXI.Container{
     };
 
     loadItems(items) {
-        this.scrollingContainer.innerContainer.removeChildren();
-        let y = 0;
-        for (let i = 0;i<items.length;i++) {
-            let item = items[i];
-            let itemSprite = new Item(item);
-            itemSprite.y = y;
-            y+=60;
+        if(items!= null){
+            this.scrollingContainer.innerContainer.removeChildren();
+            let y = 0;
+            for (let i = 0;i<items.length;i++) {
+                let item = items[i];
+                let itemSprite = new Item(item);
+                itemSprite.y = y;
+                y+=60;
 
-            itemSprite.container.mouseup = () => {
-                if(this.itemSelected === itemSprite){
-                    itemSprite.selection(false);
-                    this.itemSelected = null;
-                }else {
-                    if(this.itemSelected != null){
-                        this.itemSelected.selection(false);
+                itemSprite.container.mouseup = () => {
+                    if(this.itemSelected === itemSprite){
+                        itemSprite.selection(false);
+                        this.itemSelected = null;
+                    }else {
+                        if(this.itemSelected != null){
+                            this.itemSelected.selection(false);
+                        }
+                        itemSprite.selection(true);
+                        this.itemSelected = itemSprite;
                     }
-                    itemSprite.selection(true);
-                    this.itemSelected = itemSprite;
-                }
-            };
+                };
 
 
-            this.scrollingContainer.addChild(itemSprite)
+                this.scrollingContainer.addChild(itemSprite)
 
+            }
         }
+
     }
 }

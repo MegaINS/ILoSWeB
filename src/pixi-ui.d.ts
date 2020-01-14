@@ -104,6 +104,8 @@ declare namespace PIXI.UI {
     // NOTE: Only constructor. If functions use, write definitions!
     class TextInput extends PIXI.Container {
         constructor(options: any);
+
+        value: any;
     }
 
     class Button extends PIXI.Container {

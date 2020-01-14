@@ -9,6 +9,7 @@ import {Network} from "./Network";
 export class Status extends PIXI.Container {
 
     dragging: boolean;
+    show:boolean;
     pos: PIXI.Point;
     game:ILoSGame;
     textFields:PIXI.Text[] = [];
@@ -106,13 +107,20 @@ export class Status extends PIXI.Container {
 
     }
 
+    setShow(value){
+        this.show = value;
+    }
+
     update() {
 
-        for (let i in this.textFields) {
-            this.textFields[i].text = this.game.player[i]
+        if(this.show){
+            for (let i in this.textFields) {
+                this.textFields[i].text = this.game.player[i]
+            }
+
+            this.bEnter.state(this.game.gui.location.playerIsInWarp(this.game.player))
         }
 
-        this.bEnter.state(this.game.location.playerIsInWarp(this.game.player))
     }
 
 

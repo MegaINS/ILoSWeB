@@ -21,7 +21,6 @@ export class ILoSGame {
     CANVAS_HEIGHT: number = 650;
     CANVAS_WIDTH: number = window.innerWidth;
     player: Player;
-    location: Location;
 
     load = () => {
         PIXI.Loader.shared
