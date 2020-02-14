@@ -18,7 +18,7 @@ export class ILoSGame {
 
     app: PIXI.Application;
     gui: Gui;
-    CANVAS_HEIGHT: number = 650;
+    CANVAS_HEIGHT: number = window.innerHeight;
     CANVAS_WIDTH: number = window.innerWidth;
     player: Player;
 
@@ -33,7 +33,8 @@ export class ILoSGame {
             .add('danges', '/assets/img/json/danges.json')
             .add('shop', '/assets/img/json/shop.json')
             .add('top', '/assets/img/json/top.json')
-
+            .add('chat', '/assets/img/json/chat.json')
+            .add('bottom', '/assets/img/json/bottom.json')
             .load(this.init);
 
     };

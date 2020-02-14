@@ -4,6 +4,7 @@ import {Status} from "./Status";
 import {PlayerInfo} from "./playerInfo/PlayerInfo";
 import {Shop} from "./shop/Shop";
 import {Question} from "./Question";
+import {Bottom} from "./Bottom";
 
 
 export class Gui {
@@ -14,13 +15,17 @@ export class Gui {
     shop:Shop;
     game:ILoSGame;
     location;
+    bottom;
+
     constructor(game: ILoSGame) {
         this.game = game;
         this.top = new Top(game);
         this.userInfo = new PlayerInfo(game);
         this.status = new Status(game);
         this.status.y = 30;
-        game.app.stage.addChild(this.top,this.status);
+        this.bottom = new Bottom(game);
+        this.bottom.y = 700;
+        game.app.stage.addChild(this.top,this.status,this.bottom );
         this.status.setShow(true);
     }
 
@@ -47,6 +52,11 @@ export class Gui {
             this.game.app.stage.removeChild(this.shop);
             this.shop.destroy();
             this.shop = null;
+        }
+        if( this.location != null) {
+            this.game.app.stage.removeChild(this.location);
+            this.location.destroy();
+            this.location = null;
         }
         this.status.setShow(true);
         this.location = location;

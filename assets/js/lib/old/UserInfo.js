@@ -1,4 +1,4 @@
-define(['Resources', 'assets/js/lib/old/Button','Item'], function (Resources, Button, Item) {
+define(['assets/js/lib/old/Resources', 'assets/js/lib/old/Button','Item'], function (Resources, Button, Item) {
 
     class PlayerInfo {
 

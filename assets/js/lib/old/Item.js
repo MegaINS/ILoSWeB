@@ -1,4 +1,4 @@
-define(['Resources'],function (Resources) {
+define(['assets/js/lib/old/Resources'],function (Resources) {
 
     class Item extends PIXI.UI.Container{
         constructor(item) {

@@ -1,8 +1,13 @@
-
 *{
-    margin: auto;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
+html, body {
+    width:100%;
+    height:100%;
+}
+
+canvas { display:block; }
 
 
 #userInfo {
@@ -36,7 +41,7 @@
     height:250px;
     width: calc(100% - 2px);
     bottom:0;
-  
+
 }
 
 #chat{

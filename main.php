@@ -27,21 +27,21 @@
     <body>
 
 
-        <div class="static" id="bottomMenu">
-            <div id="chat">
-                <h3>Chat</h3>
-                <div id="console" class="well">
-                </div>
-                <form class="well form-inline" onsubmit="return false;">
-                    <input id="msg" class="input-xlarge" type="text" placeholder="Type something..."/>
-                    <button type="button" onClick="sendMessage()" class="btn btn-primary" id="send">Send</button>
-                </form>
-            </div>
-            <div id="players">
-                <h3>Player list</h3>
-                <div id="playerList" class="well">
-            </div>
-        </div>
-    </div>
+<!--        <div class="static" id="bottomMenu">-->
+<!--            <div id="chat">-->
+<!--                <h3>Chat</h3>-->
+<!--                <div id="console" class="well">-->
+<!--                </div>-->
+<!--                <form class="well form-inline" onsubmit="return false;">-->
+<!--                    <input id="msg" class="input-xlarge" type="text" placeholder="Type something..."/>-->
+<!--                    <button type="button" onClick="sendMessage()" class="btn btn-primary" id="send">Send</button>-->
+<!--                </form>-->
+<!--            </div>-->
+<!--            <div id="players">-->
+<!--                <h3>Player list</h3>-->
+<!--                <div id="playerList" class="well">-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
     </body>
 </html>

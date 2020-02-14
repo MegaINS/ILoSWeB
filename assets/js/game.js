@@ -37,7 +37,7 @@ function init(loader, resources) {
         'jquery',
         "assets/js/lib/old/Gui",
         "assets/js/lib/old/Button",
-        "Resources",
+        "assets/js/lib/old/Resources",
         'assets/js/lib/old/Location'
     ], function (pixiUi,
                  io,
@@ -91,9 +91,9 @@ function setEventHandlers() {
 
     window.addEventListener('resize', resizeCanvas, false);
 
-    socket.on('connect', function () {
-        output('<span class="connect-msg">Client has connected to the server!</span>');
-    });
+    // socket.on('connect', function () {
+    //     output('<span class="connect-msg">Client has connected to the server!</span>');
+    // });
 
     socket.on('chatevent', function (data) {
         output('<span class="username-msg">' + data.userName + ':</span> ' + data.message);
@@ -123,133 +123,133 @@ function setEventHandlers() {
     });
 
 
-    socket.on('locationUpdate', function (data) {
-        output('<span class="username-msg">LocationUpdate:</span> ' + data.locationType);
-
-        if (window.loc != null) {
-            window.loc.destroy();
-        }
-
-        switch (data.locationType) {
-            case "OPEN":
-                var location = new Location.Map(data.src, data.warps);
-                window.loc = location;
-                break;
-            case "HAB":
-                var location = new Location.Hab(data.weight, data.height, data.warps, data.area);
-
-                window.loc = location;
-                break;
-            case "MINE":
-                var location = new Location.Mine(data.weight, data.height, data.warps, data.tile, data.resources, data.mineType.toLowerCase());
-                window.loc = location;
-                break;
-
-
-            default:
-                console.log(data.locationType);
-        }
-
-
-    });
-
-
-    socket.on('playerUpdate', function (data) {
-        output('<span class="username-msg">PlayerUpdate:</span> ' + data.action);
-
-        switch (data.action) {
-            case "SPAWN":
-                loc.spawn(player, data.x, data.y);
-                break;
-            case "MOVE":
-                loc.move(player, data.x, data.y);
-                break;
-            default:
-                console.log(data.action);
-        }
-        window.gui.update();
-    });
-
-    socket.on('enemyUpdate', function (data) {
-        output('<span class="username-msg">EnemyUpdate:</span> ' + data.action);
-
-        switch (data.action) {
-            case "SPAWN":
-                loc.spawnEnemy(data.id, data.x, data.y);
-                break;
-            case "MOVE":
-                loc.moveEnemy(data.id, data.x, data.y);
-                gui.update();
-                break;
-            case "REMOVE":
-                loc.removeEnemy(data.id);
-                break;
-            default:
-                console.log(data.action);
-        }
-    });
-
-    socket.on('locUpdate', function (data) {
-        output('<span class="username-msg">LocUpdate:</span> ' + data.x + ' ' + data.y);
-        loc.update(data.x, data.y)
-    });
+    // socket.on('locationUpdate', function (data) {
+    //     output('<span class="username-msg">LocationUpdate:</span> ' + data.locationType);
+    //
+    //     if (window.loc != null) {
+    //         window.loc.destroy();
+    //     }
+    //
+    //     switch (data.locationType) {
+    //         case "OPEN":
+    //             var location = new Location.Map(data.src, data.warps);
+    //             window.loc = location;
+    //             break;
+    //         case "HAB":
+    //             var location = new Location.Hab(data.weight, data.height, data.warps, data.area);
+    //
+    //             window.loc = location;
+    //             break;
+    //         case "MINE":
+    //             var location = new Location.Mine(data.weight, data.height, data.warps, data.tile, data.resources, data.mineType.toLowerCase());
+    //             window.loc = location;
+    //             break;
+    //
+    //
+    //         default:
+    //             console.log(data.locationType);
+    //     }
+    //
+    //
+    // });
 
 
-    socket.on('loadPlayerInfo', function (data) {
-
-        player.nick = data.nick;
-
-        player.level = data.level;
-
-        player.health = data.health;
-        player.healthMax = data.healthMax;
-
-        player.energy = data.energy;
-        player.energyMax = data.energyMax;
-
-        player.money = data.money;
-
-        player.intellect = data.intellect;
-        player.concentration = data.concentration;
-        player.stamina = data.stamina;
-        player.power = data.power;
-
-
-
-        gui.status.nick.text = data.nick;
-
-        gui.status.level.text = data.level;
-
-        gui.status.health.text = data.health;
-        gui.status.healthMax.text = data.healthMax;
-
-        gui.status.energy.text = data.energy;
-        gui.status.energyMax.text = data.energyMax;
-
-        gui.status.money.text = data.money;
-
-        gui.status.power.text = data.power;
-        gui.status.intellect.text = data.intellect;
-        gui.status.concentration.text = data.concentration;
-        gui.status.stamina.text = data.stamina;
-
-
-
-
-    });
-
-    socket.on('loadPlayerInventory', function (data) {
-
-        gui.userInfo.sections.inventory.loadItems(data.items)
+    // socket.on('playerUpdate', function (data) {
+    //     output('<span class="username-msg">PlayerUpdate:</span> ' + data.action);
+    //
+    //     switch (data.action) {
+    //         case "SPAWN":
+    //             loc.spawn(player, data.x, data.y);
+    //             break;
+    //         case "MOVE":
+    //             loc.move(player, data.x, data.y);
+    //             break;
+    //         default:
+    //             console.log(data.action);
+    //     }
+    //     window.gui.update();
+    // });
+    //
+    // socket.on('enemyUpdate', function (data) {
+    //     output('<span class="username-msg">EnemyUpdate:</span> ' + data.action);
+    //
+    //     switch (data.action) {
+    //         case "SPAWN":
+    //             loc.spawnEnemy(data.id, data.x, data.y);
+    //             break;
+    //         case "MOVE":
+    //             loc.moveEnemy(data.id, data.x, data.y);
+    //             gui.update();
+    //             break;
+    //         case "REMOVE":
+    //             loc.removeEnemy(data.id);
+    //             break;
+    //         default:
+    //             console.log(data.action);
+    //     }
+    // });
+    //
+    // socket.on('locUpdate', function (data) {
+    //     output('<span class="username-msg">LocUpdate:</span> ' + data.x + ' ' + data.y);
+    //     loc.update(data.x, data.y)
+    // });
 
 
-    })
-    socket.on('updatePlayerInventory', function (data) {
+    // socket.on('loadPlayerInfo', function (data) {
+    //
+    //     player.nick = data.nick;
+    //
+    //     player.level = data.level;
+    //
+    //     player.health = data.health;
+    //     player.healthMax = data.healthMax;
+    //
+    //     player.energy = data.energy;
+    //     player.energyMax = data.energyMax;
+    //
+    //     player.money = data.money;
+    //
+    //     player.intellect = data.intellect;
+    //     player.concentration = data.concentration;
+    //     player.stamina = data.stamina;
+    //     player.power = data.power;
+    //
+    //
+    //
+    //     gui.status.nick.text = data.nick;
+    //
+    //     gui.status.level.text = data.level;
+    //
+    //     gui.status.health.text = data.health;
+    //     gui.status.healthMax.text = data.healthMax;
+    //
+    //     gui.status.energy.text = data.energy;
+    //     gui.status.energyMax.text = data.energyMax;
+    //
+    //     gui.status.money.text = data.money;
+    //
+    //     gui.status.power.text = data.power;
+    //     gui.status.intellect.text = data.intellect;
+    //     gui.status.concentration.text = data.concentration;
+    //     gui.status.stamina.text = data.stamina;
+    //
+    //
+    //
+    //
+    // });
 
-        gui.userInfo.sections.inventory.updateItems(data.items)
-
-
-    })
+    // socket.on('loadPlayerInventory', function (data) {
+    //
+    //     gui.userInfo.sections.inventory.loadItems(data.items)
+    //
+    //
+    // })
+    // socket.on('updatePlayerInventory', function (data) {
+    //
+    //     gui.userInfo.sections.inventory.updateItems(data.items)
+    //
+    //
+    // })
 }
 
 function sendPacket(name, data) {

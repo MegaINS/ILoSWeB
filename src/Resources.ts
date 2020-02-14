@@ -21,6 +21,8 @@ export abstract class Resources {
     static materials = [];
     static itemLayers = [];
     static shop;
+    static chat;
+    static bottom;
 
     static load(loader: Loader, resources: Partial<Record<string, LoaderResource>>) {
 
@@ -33,6 +35,10 @@ export abstract class Resources {
         let danges = resources['danges'];
         let shop = resources['shop'];
         let top = resources['top'];
+        let chat = resources['chat'];
+        let bottom = resources['bottom'];
+
+
         const basePath = '/assets/img/';
 
         this.player = PIXI.Texture.from(basePath + 'players/player-1.png');
@@ -463,6 +469,12 @@ export abstract class Resources {
                 dis: shop.textures['shop/classes/dis_class' + i],
             }
         }
+
+
+        this.chat ={
+            bg: chat.textures['chat/bg']
+        }
+
 
     }
 
