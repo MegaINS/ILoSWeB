@@ -51,8 +51,8 @@ export class Status extends PIXI.Container {
         });
 
 
-        let nick = new PIXI.Text('', style);
-        nick.setTransform(70, 8);
+        let name = new PIXI.Text('', style);
+        name.setTransform(70, 8);
 
         let level = new PIXI.Text('', style);
         level.setTransform(134, 41);
@@ -90,7 +90,7 @@ export class Status extends PIXI.Container {
         let energyMax = new PIXI.Text('', style);
         energyMax.setTransform(80, 129);
 
-        this.textFields['nick'] = nick;
+        this.textFields['name'] = name;
         this.textFields['level'] = level;
         this.textFields['health'] = health;
         this.textFields['healthMax'] = healthMax;
@@ -102,7 +102,7 @@ export class Status extends PIXI.Container {
         this.textFields['concentration'] = concentration;
         this.textFields['stamina'] = stamina;
 
-        this.addChild(nick, level, money, power, stamina, concentration, intellect, health, healthLine, healthMax, energy, energyLine, energyMax);
+        this.addChild(name, level, money, power, stamina, concentration, intellect, health, healthLine, healthMax, energy, energyLine, energyMax);
 
 
     }

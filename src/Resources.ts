@@ -472,8 +472,88 @@ export abstract class Resources {
 
 
         this.chat ={
-            bg: chat.textures['chat/bg']
+            bg: chat.textures['chat/bg'],
+        };
+
+        this.bottom ={
+            bg_left: bottom.textures['bottom/bg_left'],
+            bg_right_min: bottom.textures['bottom/bg_right_min'],
+            bg_blue: bottom.textures['bottom/bg_blue'],
+            bg_right: bottom.textures['bottom/bg_right'],
+            buttonFilter:{
+                btn: bottom.textures['bottom/btn_filter'],
+                sel: bottom.textures['bottom/sel_filter'],
+            },
+
+            buttonClear: {
+                btn: bottom.textures['bottom/btn_clear'],
+                over: bottom.textures['bottom/over_clear'],
+                sel: bottom.textures['bottom/sel_clear'],
+                dis: bottom.textures['bottom/dis_clear'],
+            },
+            buttonEnter: {
+                btn: bottom.textures['bottom/btn_enter'],
+                over: bottom.textures['bottom/over_enter'],
+                sel: bottom.textures['bottom/sel_enter'],
+                dis: bottom.textures['bottom/dis_enter'],
+            },
+            buttonEnterClan: {
+                btn: bottom.textures['bottom/btn_enter_clan'],
+                over: bottom.textures['bottom/over_enter_clan'],
+                sel: bottom.textures['bottom/sel_enter_clan'],
+                dis: bottom.textures['bottom/dis_enter_clan'],
+            },
+            buttonExit: {
+                btn: bottom.textures['bottom/btn_exit'],
+                over: bottom.textures['bottom/over_exit'],
+                sel: bottom.textures['bottom/sel_exit'],
+                dis: bottom.textures['bottom/dis_exit'],
+            },
+            buttonMaximize: {
+                btn: bottom.textures['bottom/btn_maximize'],
+                over: bottom.textures['bottom/over_maximize'],
+                sel: bottom.textures['bottom/sel_maximize'],
+                dis: bottom.textures['bottom/dis_maximize'],
+            },
+            buttonMe: {
+                btn: bottom.textures['bottom/btn_me'],
+                over: bottom.textures['bottom/over_me'],
+                sel: bottom.textures['bottom/sel_me'],
+                dis: bottom.textures['bottom/dis_me'],
+            },
+            buttonMenu: {
+                btn: bottom.textures['bottom/btn_menu'],
+                over: bottom.textures['bottom/over_menu'],
+                sel: bottom.textures['bottom/sel_menu'],
+                dis: bottom.textures['bottom/dis_menu'],
+            },
+            buttonMinimize: {
+                btn: bottom.textures['bottom/btn_minimize'],
+                over: bottom.textures['bottom/over_minimize'],
+                sel: bottom.textures['bottom/sel_minimize'],
+                dis: bottom.textures['bottom/dis_minimize'],
+            },
+            buttonOptions: {
+                btn: bottom.textures['bottom/btn_options'],
+                over: bottom.textures['bottom/over_options'],
+                sel: bottom.textures['bottom/sel_options'],
+                dis: bottom.textures['bottom/dis_options'],
+            },
+            buttonSets: {
+                btn: bottom.textures['bottom/btn_sets'],
+                over: bottom.textures['bottom/over_sets'],
+                sel: bottom.textures['bottom/sel_sets'],
+                dis: bottom.textures['bottom/dis_sets'],
+            },
+            buttonSmile: {
+                btn: bottom.textures['bottom/btn_smile'],
+                over: bottom.textures['bottom/over_smile'],
+                sel: bottom.textures['bottom/sel_smile'],
+                dis: bottom.textures['bottom/dis_smile'],
+            },
+
         }
+
 
 
     }

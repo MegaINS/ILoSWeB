@@ -95,13 +95,13 @@ function setEventHandlers() {
     //     output('<span class="connect-msg">Client has connected to the server!</span>');
     // });
 
-    socket.on('chatevent', function (data) {
-        output('<span class="username-msg">' + data.userName + ':</span> ' + data.message);
-    });
+    // socket.on('chatevent', function (data) {
+    //     output('<span class="username-msg">' + data.userName + ':</span> ' + data.message);
+    // });
 
-    socket.on('disconnect', function () {
-        output('<span class="disconnect-msg">The client has disconnected!</span>');
-    });
+    // socket.on('disconnect', function () {
+    //     output('<span class="disconnect-msg">The client has disconnected!</span>');
+    // });
 
     socket.on('loadPlayersList', function (data) {
         var players = "";

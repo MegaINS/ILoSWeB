@@ -12,12 +12,15 @@ export class Network {
 
     socket;
     game: ILoSGame;
-
+    chat;
     private constructor(game) {
         this.game = game;
+        this.chat =this.game.gui.bottom.chat;
         this.socket = socketIO.connect('http://localhost:9040');
 
         this.socket.on('connect', this.connected);
+        this.socket.on('disconnect',  this.disconnect);
+        this.socket.on('chatevent',  this.chatevent);
         this.socket.on('loadPlayerInfo', this.loadPlayerInfo);
         this.socket.on('locationUpdate', this.locationUpdate);
 
@@ -32,7 +35,17 @@ export class Network {
 
     private connected =()  =>{
         console.log('Client has connected to the server!');
+        this.chat.addMessage(   "<font color='#00AA00'>Client has connected to the server!</font>\n");
     };
+
+    private disconnect =()  => {
+        this.chat.addMessage("<font color='#FF0000'>The client has disconnected!</font>");
+    };
+
+    private chatevent =(data)  => {
+        this.chat.addMessage('<font color="#FFA500"\>' + data.userName + ':</font> ' + data.message);
+    };
+
 
     private loadPlayerInfo = (data) =>{
         for (let i in data) {

@@ -2,6 +2,7 @@ declare namespace PIXI.UI {
 
     class Stage extends PIXI.Container {
         constructor(width: number, height: number);
+        constructor();
         minWidth: number;
         minHeight: number;
         UIChildren: any[];
@@ -15,7 +16,13 @@ declare namespace PIXI.UI {
     }
 
     class Container extends PIXI.Container {
+        anchorBottom: number;
+        anchorTop: number;
+        anchorRight: number;
+        anchorLeft: number;
+        minHeight: number;
         constructor(width: number, height: number);
+        constructor();
         container:any;
         textureBg:any;
     }
@@ -46,6 +53,7 @@ declare namespace PIXI.UI {
     // NOTE: Only constructor. If functions use, write definitions!
     class SliceSprite extends PIXI.Container {
         constructor(texture: any, borderWidth: any, horizontalSlice: any, verticalSlice: any, tile: any);
+        constructor(texture: any, borderWidth: any);
     }
 
     class Slider extends PIXI.Container {
@@ -73,6 +81,9 @@ declare namespace PIXI.UI {
 
     // NOTE: Only constructor. If functions use, write definitions!
     class ScrollBar extends PIXI.Container {
+        anchorBottom: number;
+        track: any;
+        handle: any;
         constructor(options: any);
         anchorTop:any;
         anchorRight:any;
@@ -103,8 +114,10 @@ declare namespace PIXI.UI {
 
     // NOTE: Only constructor. If functions use, write definitions!
     class TextInput extends PIXI.Container {
-        constructor(options: any);
+        textContainer: any;
 
+        constructor(options: any);
+        background: any;
         value: any;
     }
 
