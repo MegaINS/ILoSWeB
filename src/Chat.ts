@@ -45,17 +45,25 @@ export class Chat extends PIXI.Container {
 
 
     addMessage(text){
+        let date = new Date();
+        let time = ("0" + date.getHours()).slice(-2)   + ":" + ("0" + date.getMinutes()).slice(-2) + " ";
 
 
-        let dynamicText = new PIXI.UI.DynamicText(text, {
-            style: { fontSize: 18},
+
+
+        let dynamicText = new PIXI.UI.DynamicText(time + text, {
+            style: { fontSize: 18,tint:'#000000'},
             allowTags: true,
-            width: '100%',
         });
         dynamicText.y = this.scrollingHeight;
         dynamicText.x = 5;
         this.scrollingHeight += 20;
         this.scrollingContainer.addChild(dynamicText);
+    }
+
+    clearChat(){
+        this.scrollingContainer.innerContainer.removeChildren();
+        this.scrollingHeight = 5;
     }
 
 }

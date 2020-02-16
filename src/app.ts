@@ -35,6 +35,7 @@ export class ILoSGame {
             .add('top', '/assets/img/json/top.json')
             .add('chat', '/assets/img/json/chat.json')
             .add('bottom', '/assets/img/json/bottom.json')
+            .add('userList', '/assets/img/json/userList.json')
             .load(this.init);
 
     };

@@ -1,82 +1,101 @@
 import * as PIXI from "pixi.js";
 import {ILoSGame} from "./app";
+import {Resources} from "./Resources";
 
 export class PlayerList extends PIXI.Container {
 
+
+    scrollingContainer;
+    scrollingHeight:number = 5;
+
+    playerList ={};
+
     constructor(game: ILoSGame) {
         super();
+        let height = 263;
+        let width = 274;
 
-        const beatifulRect = new PIXI.Graphics();
-
-
-        beatifulRect.beginFill(0xAAFF00);
-        beatifulRect.drawRect(0, 0, game.CANVAS_WIDTH-270, 300);
-        beatifulRect.endFill();
-        this.addChild(beatifulRect);
-
-
-
-        var text = "<font align='center'>\n";
-        text += "<i>italic</i> <b>bold</b> <font style='oblique'>oblique</font>  <font  skew='0.2'>Skew</font>\n";
-        text += "<font size='100' weight='bold' shadow='#000000 0.5 5 5 5'>BIG</font> and <font rotation='-0.3' size='80' stroke='3' fill='transparent' tint='#ffffff' strokeShadow='purple 0.5 0 -2 8, yellow 0.6 0 5 2, cyan 0.6 5 0 2, red 0.6 -5 0 2' strokeFill='#0000ff, #FF0000, #0000ff'>TWISTED</font>\n";
-        text += "<font family='Segoe UI' size='75' color='#65ba37' spacing='30' style='italic' weight='bold'>multiple things</font>\n";
-        text += "<font size='100' tint='#ffffff' family='tangerine' weight='bold' fill='purple, black' shadow='#000000' >from a different Family</font>\n";
-        text += "<font size='60' shadow='purple 0.5 0 -2 2, yellow 0.5 0 5 2, cyan 0.5 5 0 2, red 0.5 -5 0 2'>\n<font rotation='0.5'>😋😜😝😛👱🏻👴🏻👵🏻👲🏻\n<font rotation='1'>👶🏼👦🏼👧🏼👨🏼👶🏽👦🏽👧🏽👨🏽\n<font rotation='-0.5'>👦🏾👧🏾👨🏾👩🏾👦🏿👧🏿👨🏿👩🏿";
-
-
-        var uiStage = new PIXI.UI.Stage(game.CANVAS_WIDTH-270-50, 300);
-
-
-        // var box = new PIXI.UI.SliceSprite(PIXI.Texture.fromFrame("UI/cb-1-bg.png"), 10);
-        // box.anchorBottom = box.anchorRight = box.anchorTop = 10;
-        // box.anchorLeft = "40%";
-        // box.alpha = 1;
-        // uiStage.addChild(box);
-
-
-       let container = new PIXI.UI.ScrollingContainer({ width: 370,
-           height: 240});
-       // container.anchorBottom = container.anchorRight = container.anchorTop = 18;
-       // container.anchorLeft = "40%";
-        uiStage.addChild(container);
-
-
-
-
-     //   var input = document.createElement("input");
-      //  input.type = "text";
-
-
-       // var input = document.createElement("textarea");
-        //input.className = "input";
-     //   document.body.appendChild(input);
-      //  input.value = text;
-      //   input.addEventListener("input", function () {
-      //       dynamicText.value = input.value;
-      //   });
-
-
-
-
-
-
-       let dynamicText = new PIXI.UI.DynamicText(text, {
-            allowTags: true,
-            width: '100%',
-            height: '100%'
+        this.scrollingContainer = new PIXI.UI.ScrollingContainer({
+            width:  width,
+            height: height,
+            scrollX: false,
+            scrollY: true,
         });
-        container.addChild(dynamicText);
+
+        var scrollbar = new PIXI.UI.ScrollBar({
+            track: new PIXI.UI.TilingSprite(Resources.scroll.bar_bg_vertical, 13,1),
+            handle: new PIXI.UI.TilingSprite(Resources.scroll.bar_thumb_vert2, 13,1),
+            scrollingContainer: this.scrollingContainer,
+            vertical: true,
+            autohide: false
+        });
+        scrollbar.anchorRight = 0;
+
+        var uiStage = new PIXI.UI.Stage(this.scrollingContainer.width+scrollbar.width,this.scrollingContainer.height);
+
+        uiStage.addChild(this.scrollingContainer,scrollbar);
+
         this.addChild(uiStage)
-        // dynamicText.style.fontSize = 16;
-        // dynamicText.style.fontFamily = 'Calibri';
-        // dynamicText.style.fontWeight = 'bold';
-        // dynamicText.style.tint = '#000000';
-        // dynamicText.anchorLeft = dynamicText.anchorRight = 20;
-        // dynamicText.anchorTop = dynamicText.anchorBottom = 10;
-
-
 
     }
+
+
+
+
+    loadPlayersList (data){
+        this.scrollingContainer.innerContainer.removeChildren();
+        this.scrollingHeight = 5;
+        for (let i = 0; i < data.list.length; i++) {
+            this.addPlayerInPlayersList(data.list[i]);
+        }
+    }
+    addPlayerInPlayersList (player){
+        let id = player.id;
+
+        var name = '<font  color="#000000">' + player.name +'['+player.level+']'+ '</font> ';
+
+        var container = new PIXI.UI.Container();
+        let privat = new PIXI.UI.Sprite(Resources.userList.private);
+        let info = new PIXI.UI.Sprite(Resources.userList.info);
+        info.x  = privat.x + privat.width;
+
+
+        let dynamicText = new PIXI.UI.DynamicText(name, {
+            style: { fontSize: 12},
+            allowTags: true,
+        });
+        dynamicText.x =info.x + info.width+3;
+        dynamicText.y =2;
+        container.y = this.scrollingHeight;
+        container.x = 10;
+
+
+        container.addChild(privat,dynamicText,info);
+        this.scrollingContainer.addChild(container);
+
+        this.scrollingHeight += 13;
+
+        this.playerList[id] = container;
+    }
+
+    removePlayerWithPlayersList (player){
+        this.scrollingContainer.removeChild(this.playerList[player.id]);
+
+        delete this.playerList[player.id];
+        this.rebuildPlayerList();
+
+    }
+    rebuildPlayerList(){
+        this.scrollingHeight = 5;
+
+       for(let id in this.playerList) {
+           let player = this.playerList[id];
+           player.y = this.scrollingHeight;
+           this.scrollingHeight += 13;
+       }
+
+    }
+
 
 
 }

@@ -25,10 +25,6 @@ export class Bottom extends PIXI.Container {
         this.addChild(beatifulRect);
 
 
-        //
-        // this.playerList = new PlayerList(game);
-        // this.playerList.x =  game.CANVAS_WIDTH-270;
-        // this.addChild(this.playerList)
 
         let bg_left = new PIXI.Sprite(Resources.bottom.bg_left);
         let bg_right = new PIXI.Sprite(Resources.bottom.bg_right);
@@ -45,7 +41,9 @@ export class Bottom extends PIXI.Container {
 
 
 
-        let buttonClear = new Button(Resources.bottom.buttonClear,()=>{});
+        let buttonClear = new Button(Resources.bottom.buttonClear,()=>{
+            this.chat.clearChat();
+        });
         let buttonSets = new Button(Resources.bottom.buttonSets,()=>{});
         let buttonMinimize = new Button(Resources.bottom.buttonMinimize,()=>{});
 
@@ -110,6 +108,10 @@ export class Bottom extends PIXI.Container {
         this.chat = new Chat(game);
         this.addChild(this.chat);
 
+
+         this.playerList = new PlayerList(game);
+         this.playerList.x =  game.CANVAS_WIDTH-287;
+         this.addChild(this.playerList)
 
     }
 

@@ -23,6 +23,9 @@ export abstract class Resources {
     static shop;
     static chat;
     static bottom;
+    static userList;
+
+
 
     static load(loader: Loader, resources: Partial<Record<string, LoaderResource>>) {
 
@@ -37,7 +40,7 @@ export abstract class Resources {
         let top = resources['top'];
         let chat = resources['chat'];
         let bottom = resources['bottom'];
-
+        let userList = resources['userList'];
 
         const basePath = '/assets/img/';
 
@@ -552,8 +555,11 @@ export abstract class Resources {
                 dis: bottom.textures['bottom/dis_smile'],
             },
 
+        };
+        this.userList = {
+            private: userList.textures['userlist/private'],
+            info: userList.textures['userlist/info'],
         }
-
 
 
     }

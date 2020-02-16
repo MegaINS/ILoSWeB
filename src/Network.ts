@@ -15,7 +15,7 @@ export class Network {
     chat;
     private constructor(game) {
         this.game = game;
-        this.chat =this.game.gui.bottom.chat;
+        this.chat = this.game.gui.bottom.chat;
         this.socket = socketIO.connect('http://localhost:9040');
 
         this.socket.on('connect', this.connected);
@@ -30,7 +30,22 @@ export class Network {
         this.socket.on('loadPlayerInventory', this.loadPlayerInventory);
 
         this.socket.on('shopLoad', this.shopLoad);
+
+        this.socket.on('loadPlayersList', this.loadPlayersList);
+        this.socket.on('addPlayer', this.addPlayerInPlayersList);
+        this.socket.on('removePlayer', this.removePlayerWithPlayersList);
     }
+
+    private loadPlayersList =(data)  =>{
+        this.game.gui.bottom.playerList.loadPlayersList(data)
+    };
+    private addPlayerInPlayersList =(data)  =>{
+        this.game.gui.bottom.playerList.addPlayerInPlayersList(data)
+    };
+    private removePlayerWithPlayersList =(data)  =>{
+        this.game.gui.bottom.playerList.removePlayerWithPlayersList(data)
+    };
+
 
 
     private connected =()  =>{
@@ -43,7 +58,7 @@ export class Network {
     };
 
     private chatevent =(data)  => {
-        this.chat.addMessage('<font color="#FFA500"\>' + data.userName + ':</font> ' + data.message);
+        this.chat.addMessage('<font color="#FFA500">' + data.userName + ':</font> ' + data.message);
     };
 
 
