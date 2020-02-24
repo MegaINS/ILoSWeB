@@ -9,7 +9,7 @@ import {Network} from "./Network";
 export class Status extends PIXI.Container {
 
     dragging: boolean;
-    show:boolean;
+    show:boolean = false;
     pos: PIXI.Point;
     game:ILoSGame;
     textFields:PIXI.Text[] = [];

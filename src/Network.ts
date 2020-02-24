@@ -77,7 +77,7 @@ export class Network {
         let location;
         switch (data.locationType) {
             case "OPEN":
-                location = new LocationMap(data.src, data.warps);
+                location = new LocationMap(data.src, data.warps,data.weight, data.height,);
                 break;
             case "HAB":
                 location = new LocationHab(data.weight, data.height, data.warps, data.area);

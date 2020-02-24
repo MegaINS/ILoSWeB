@@ -6,18 +6,15 @@ import * as PIXI from 'pixi.js'
 export class LocationMine extends Location {
 
     tileSize: number = 102;
-    widthLoc:number = 0;
-    heightLoc:number = 0 ;
     tile ;
     resources ;
     sprites;
     area ;
 
     constructor(width, height, warps, tile, resources,area) {
-        super(warps);
+        super(warps, width, height);
 
-        this.widthLoc = width;
-        this.heightLoc = height;
+
         this.tile = tile;
         this.resources = resources;
         this.area = area;

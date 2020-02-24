@@ -5,8 +5,8 @@ import * as PIXI from 'pixi.js'
 export class LocationMap extends Location {
 
     tileSize: number = 100;
-    constructor(scr, warps) {
-        super(warps);
+    constructor(scr, warps,width, height) {
+        super(warps,width, height);
 
         let loc = Resources.location.get(scr);
 

@@ -12,7 +12,7 @@ export abstract class Resources {
     static enemy;
     static bg;
     static location;
-    static cursor;
+    static cursors;
     static danges;
     static resources = [];
     static userInfo;
@@ -24,7 +24,6 @@ export abstract class Resources {
     static chat;
     static bottom;
     static userList;
-
 
 
     static load(loader: Loader, resources: Partial<Record<string, LoaderResource>>) {
@@ -41,19 +40,39 @@ export abstract class Resources {
         let chat = resources['chat'];
         let bottom = resources['bottom'];
         let userList = resources['userList'];
+        let cursors = resources['cursors'];
+        let player = resources['player'];
 
         const basePath = '/assets/img/';
 
-        this.player = PIXI.Texture.from(basePath + 'players/player-1.png');
+
+
+        this.player ={
+            male:  player.textures['player/area/male'],
+            enemy:player.textures['player/area/male']
+        };
+
         this.warp = PIXI.Texture.from(basePath + 'danges/danges/danges-46.png');
-        this.enemy = PIXI.Texture.from(basePath + 'players/enemy-0.png');
         this.bg = PIXI.Texture.from(basePath + 'gui/bg.gif');
 
         this.location = new Map([["antiria", PIXI.Texture.from(basePath + 'levels/antiria/antiria.png')]]);
 
-        this.cursor = [
-            PIXI.Texture.from(basePath + 'gui/cursor-0.gif'),
-            PIXI.Texture.from(basePath + 'gui/pointer.gif')];
+        this.cursors = {
+            arr: [
+                cursors.textures['cursors/0'],
+                cursors.textures['cursors/1'],
+                cursors.textures['cursors/2'],
+                cursors.textures['cursors/3'],
+                cursors.textures['cursors/4'],
+                cursors.textures['cursors/5'],
+                cursors.textures['cursors/6'],
+                cursors.textures['cursors/7'],
+                cursors.textures['cursors/8'],
+                cursors.textures['cursors/9'],
+            ],
+            pointer: cursors.textures['cursors/pointer'],
+        };
+
 
         this.top = {
             bg: top.textures['top/bg'],

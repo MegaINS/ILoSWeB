@@ -11,7 +11,7 @@ if(isset($_POST['submit'])){
     }
     if(empty($errors)){
         include('bd.php');
-        $player = $mysqli->query("SELECT * FROM player_auth WHERE email='$email'")->fetch_object();
+        $player = $mysqli->query("SELECT * FROM auth WHERE email='$email'")->fetch_object();
         if($player){
             if($player->password == $pass){
                 session_start();

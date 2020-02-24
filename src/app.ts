@@ -5,7 +5,7 @@ import Loader = PIXI.Loader;
 import {Resources} from "./Resources";
 import {Network} from "./Network";
 import {Player} from "./Player";
-import {Location} from "./location/Location";
+
 
 
 window.onload = () => {
@@ -36,6 +36,8 @@ export class ILoSGame {
             .add('chat', '/assets/img/json/chat.json')
             .add('bottom', '/assets/img/json/bottom.json')
             .add('userList', '/assets/img/json/userList.json')
+            .add('cursors', '/assets/img/json/cursors.json')
+            .add('player', '/assets/img/json/player.json')
             .load(this.init);
 
     };

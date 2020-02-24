@@ -26,7 +26,6 @@ export class Gui {
         this.bottom = new Bottom(game);
         this.bottom.y = game.CANVAS_HEIGHT-300;
         game.app.stage.addChild(this.top,this.status,this.bottom );
-        this.status.setShow(true);
     }
 
 

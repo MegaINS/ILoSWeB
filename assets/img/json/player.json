@@ -1,0 +1,970 @@
+{"frames": {
+
+"player/area/female":
+{
+	"frame": {"x":1455,"y":1,"w":46,"h":45},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":42,"y":17,"w":46,"h":45},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/area/female_move":
+{
+	"frame": {"x":590,"y":1,"w":46,"h":60},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":42,"y":2,"w":46,"h":60},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/area/female_rest":
+{
+	"frame": {"x":743,"y":62,"w":46,"h":59},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":42,"y":3,"w":46,"h":59},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/area/male":
+{
+	"frame": {"x":1195,"y":53,"w":49,"h":46},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":39,"y":18,"w":49,"h":46},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/area/male_move":
+{
+	"frame": {"x":393,"y":1,"w":49,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":39,"y":2,"w":49,"h":62},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/area/male_rest":
+{
+	"frame": {"x":444,"y":1,"w":49,"h":61},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":39,"y":3,"w":49,"h":61},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/attack/female2":
+{
+	"frame": {"x":1146,"y":54,"w":47,"h":50},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":37,"y":14,"w":47,"h":50},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/attack/female4":
+{
+	"frame": {"x":482,"y":64,"w":61,"h":48},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":34,"y":17,"w":61,"h":48},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/attack/female6":
+{
+	"frame": {"x":195,"y":1,"w":63,"h":47},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":24,"y":17,"w":63,"h":47},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/attack/female8":
+{
+	"frame": {"x":1338,"y":51,"w":38,"h":48},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":40,"y":25,"w":38,"h":48},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/attack/male2":
+{
+	"frame": {"x":746,"y":1,"w":49,"h":57},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":35,"y":12,"w":49,"h":57},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/attack/male4":
+{
+	"frame": {"x":1,"y":1,"w":67,"h":46},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":31,"y":15,"w":67,"h":46},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/attack/male6":
+{
+	"frame": {"x":97,"y":1,"w":66,"h":47},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":15,"w":66,"h":47},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/attack/male8":
+{
+	"frame": {"x":898,"y":58,"w":47,"h":55},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":39,"y":24,"w":47,"h":55},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/forest/female":
+{
+	"frame": {"x":1096,"y":1,"w":52,"h":45},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":17,"w":52,"h":45},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/forest/female_look":
+{
+	"frame": {"x":791,"y":60,"w":52,"h":55},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":7,"w":52,"h":55},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/forest/female_mine":
+{
+	"frame": {"x":635,"y":63,"w":52,"h":59},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":3,"w":52,"h":59},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/forest/female_move":
+{
+	"frame": {"x":148,"y":67,"w":52,"h":60},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":2,"w":52,"h":60},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/forest/female_rest":
+{
+	"frame": {"x":638,"y":1,"w":52,"h":59},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":3,"w":52,"h":59},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/forest/male":
+{
+	"frame": {"x":1000,"y":1,"w":54,"h":46},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":34,"y":18,"w":54,"h":46},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/forest/male_look":
+{
+	"frame": {"x":1,"y":70,"w":54,"h":57},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":34,"y":7,"w":54,"h":57},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/forest/male_mine":
+{
+	"frame": {"x":202,"y":66,"w":54,"h":61},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":34,"y":3,"w":54,"h":61},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/forest/male_move":
+{
+	"frame": {"x":337,"y":1,"w":54,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":34,"y":2,"w":54,"h":62},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/forest/male_rest":
+{
+	"frame": {"x":258,"y":66,"w":54,"h":61},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":34,"y":3,"w":54,"h":61},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/gather/female":
+{
+	"frame": {"x":1099,"y":55,"w":52,"h":45},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":17,"w":52,"h":45},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/gather/female2":
+{
+	"frame": {"x":1593,"y":1,"w":35,"h":43},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":40,"y":44,"w":35,"h":43},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/gather/female4":
+{
+	"frame": {"x":113,"y":69,"w":58,"h":33},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":9,"y":25,"w":58,"h":33},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/gather/female6":
+{
+	"frame": {"x":1559,"y":94,"w":42,"h":33},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":48,"y":25,"w":42,"h":33},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/gather/female8":
+{
+	"frame": {"x":1637,"y":89,"w":32,"h":38},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":40,"y":14,"w":32,"h":38},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/gather/male":
+{
+	"frame": {"x":1001,"y":57,"w":53,"h":46},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":35,"y":18,"w":53,"h":46},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/gather/male2":
+{
+	"frame": {"x":1227,"y":1,"w":49,"h":46},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":35,"y":37,"w":49,"h":46},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/gather/male4":
+{
+	"frame": {"x":545,"y":1,"w":61,"h":43},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":10,"y":23,"w":61,"h":43},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/gather/male6":
+{
+	"frame": {"x":1378,"y":51,"w":47,"h":45},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":43,"y":23,"w":47,"h":45},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/gather/male8":
+{
+	"frame": {"x":951,"y":1,"w":47,"h":54},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":35,"y":11,"w":47,"h":54},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/hunter/female":
+{
+	"frame": {"x":1455,"y":1,"w":46,"h":45},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":42,"y":17,"w":46,"h":45},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/hunter/female2":
+{
+	"frame": {"x":1630,"y":1,"w":35,"h":37},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":40,"y":32,"w":35,"h":37},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/hunter/female4":
+{
+	"frame": {"x":1513,"y":95,"w":44,"h":32},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":29,"y":29,"w":44,"h":32},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/hunter/female6":
+{
+	"frame": {"x":1603,"y":93,"w":34,"h":32},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":43,"y":29,"w":34,"h":32},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/hunter/female8":
+{
+	"frame": {"x":1644,"y":40,"w":32,"h":30},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":41,"y":27,"w":32,"h":30},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/hunter/male":
+{
+	"frame": {"x":1195,"y":53,"w":49,"h":46},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":39,"y":18,"w":49,"h":46},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/hunter/male2":
+{
+	"frame": {"x":1243,"y":52,"w":49,"h":44},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":35,"y":37,"w":49,"h":44},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/hunter/male4":
+{
+	"frame": {"x":1275,"y":1,"w":49,"h":43},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":22,"y":23,"w":49,"h":43},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/hunter/male6":
+{
+	"frame": {"x":1408,"y":1,"w":47,"h":45},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":43,"y":23,"w":47,"h":45},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/hunter/male8":
+{
+	"frame": {"x":1425,"y":50,"w":47,"h":44},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":38,"y":18,"w":47,"h":44},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/hunting/female":
+{
+	"frame": {"x":1096,"y":1,"w":52,"h":45},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":17,"w":52,"h":45},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/hunting/female_look":
+{
+	"frame": {"x":791,"y":60,"w":52,"h":55},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":7,"w":52,"h":55},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/hunting/female_mine":
+{
+	"frame": {"x":635,"y":63,"w":52,"h":59},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":3,"w":52,"h":59},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/hunting/female_move":
+{
+	"frame": {"x":148,"y":67,"w":52,"h":60},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":2,"w":52,"h":60},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/hunting/female_rest":
+{
+	"frame": {"x":638,"y":1,"w":52,"h":59},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":3,"w":52,"h":59},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/hunting/male":
+{
+	"frame": {"x":1000,"y":1,"w":54,"h":46},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":34,"y":18,"w":54,"h":46},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/hunting/male_look":
+{
+	"frame": {"x":1,"y":70,"w":54,"h":57},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":34,"y":7,"w":54,"h":57},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/hunting/male_mine":
+{
+	"frame": {"x":202,"y":66,"w":54,"h":61},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":34,"y":3,"w":54,"h":61},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/hunting/male_move":
+{
+	"frame": {"x":337,"y":1,"w":54,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":34,"y":2,"w":54,"h":62},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/hunting/male_rest":
+{
+	"frame": {"x":258,"y":66,"w":54,"h":61},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":34,"y":3,"w":54,"h":61},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/mine/female":
+{
+	"frame": {"x":1099,"y":55,"w":52,"h":45},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":17,"w":52,"h":45},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/mine/female2":
+{
+	"frame": {"x":1289,"y":52,"w":47,"h":48},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":37,"y":16,"w":47,"h":48},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/mine/female4":
+{
+	"frame": {"x":495,"y":1,"w":61,"h":48},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":34,"y":17,"w":61,"h":48},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/mine/female6":
+{
+	"frame": {"x":532,"y":64,"w":61,"h":47},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":26,"y":17,"w":61,"h":47},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/mine/female8":
+{
+	"frame": {"x":1368,"y":1,"w":38,"h":48},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":40,"y":25,"w":38,"h":48},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/mine/female_look":
+{
+	"frame": {"x":797,"y":1,"w":52,"h":55},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":7,"w":52,"h":55},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/mine/female_mine":
+{
+	"frame": {"x":689,"y":62,"w":52,"h":59},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":3,"w":52,"h":59},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/mine/female_move":
+{
+	"frame": {"x":581,"y":64,"w":52,"h":60},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":2,"w":52,"h":60},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/mine/female_rest":
+{
+	"frame": {"x":692,"y":1,"w":52,"h":59},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":3,"w":52,"h":59},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/mine/male":
+{
+	"frame": {"x":1001,"y":57,"w":53,"h":46},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":35,"y":18,"w":53,"h":46},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/mine/male2":
+{
+	"frame": {"x":851,"y":1,"w":49,"h":55},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":35,"y":14,"w":49,"h":55},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/mine/male4":
+{
+	"frame": {"x":49,"y":1,"w":67,"h":46},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":31,"y":15,"w":67,"h":46},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/mine/male6":
+{
+	"frame": {"x":146,"y":1,"w":64,"h":47},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":22,"y":15,"w":64,"h":47},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/mine/male8":
+{
+	"frame": {"x":902,"y":1,"w":47,"h":55},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":39,"y":24,"w":47,"h":55},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/mine/male_look":
+{
+	"frame": {"x":57,"y":70,"w":54,"h":57},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":34,"y":7,"w":54,"h":57},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/mine/male_mine":
+{
+	"frame": {"x":314,"y":66,"w":54,"h":61},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":34,"y":3,"w":54,"h":61},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/mine/male_move":
+{
+	"frame": {"x":370,"y":65,"w":54,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":34,"y":2,"w":54,"h":62},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/mine/male_rest":
+{
+	"frame": {"x":426,"y":65,"w":54,"h":61},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":34,"y":3,"w":54,"h":61},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/move/female1":
+{
+	"frame": {"x":1178,"y":1,"w":50,"h":47},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":41,"y":17,"w":50,"h":47},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/move/female2":
+{
+	"frame": {"x":1049,"y":56,"w":52,"h":48},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":41,"y":16,"w":52,"h":48},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/move/female3":
+{
+	"frame": {"x":1049,"y":56,"w":52,"h":48},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":41,"y":16,"w":52,"h":48},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/move/female4":
+{
+	"frame": {"x":1178,"y":1,"w":50,"h":47},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":41,"y":17,"w":50,"h":47},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/move/female6":
+{
+	"frame": {"x":1320,"y":1,"w":46,"h":48},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":17,"w":46,"h":48},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/move/female7":
+{
+	"frame": {"x":1048,"y":1,"w":53,"h":46},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":41,"y":17,"w":53,"h":46},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/move/female8":
+{
+	"frame": {"x":1048,"y":1,"w":53,"h":46},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":41,"y":17,"w":53,"h":46},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/move/female9":
+{
+	"frame": {"x":1320,"y":1,"w":46,"h":48},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":44,"y":17,"w":46,"h":48},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/move/male1":
+{
+	"frame": {"x":947,"y":58,"w":54,"h":52},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":43,"y":18,"w":54,"h":52},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/move/male2":
+{
+	"frame": {"x":244,"y":1,"w":63,"h":45},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":34,"y":18,"w":63,"h":45},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/move/male3":
+{
+	"frame": {"x":244,"y":1,"w":63,"h":45},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":34,"y":18,"w":63,"h":45},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/move/male4":
+{
+	"frame": {"x":947,"y":58,"w":54,"h":52},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":43,"y":18,"w":54,"h":52},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/move/male6":
+{
+	"frame": {"x":845,"y":58,"w":55,"h":51},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":42,"y":18,"w":55,"h":51},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/move/male7":
+{
+	"frame": {"x":291,"y":1,"w":63,"h":44},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":34,"y":18,"w":63,"h":44},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/move/male8":
+{
+	"frame": {"x":291,"y":1,"w":63,"h":44},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":34,"y":18,"w":63,"h":44},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/move/male9":
+{
+	"frame": {"x":845,"y":58,"w":55,"h":51},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":42,"y":18,"w":55,"h":51},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/other/female":
+{
+	"frame": {"x":1187,"y":106,"w":19,"h":45},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":10,"y":0,"w":19,"h":45},
+	"sourceSize": {"w":32,"h":45}
+},
+"player/other/male":
+{
+	"frame": {"x":1326,"y":102,"w":25,"h":45},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":7,"y":0,"w":25,"h":45},
+	"sourceSize": {"w":32,"h":45}
+},
+"player/other/sil_female":
+{
+	"frame": {"x":1049,"y":110,"w":17,"h":44},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":11,"y":2,"w":17,"h":44},
+	"sourceSize": {"w":32,"h":46}
+},
+"player/other/sil_female_blue":
+{
+	"frame": {"x":1095,"y":110,"w":17,"h":44},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":11,"y":2,"w":17,"h":44},
+	"sourceSize": {"w":32,"h":46}
+},
+"player/other/sil_female_forest":
+{
+	"frame": {"x":1373,"y":101,"w":25,"h":45},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":0,"w":25,"h":45},
+	"sourceSize": {"w":32,"h":45}
+},
+"player/other/sil_female_green":
+{
+	"frame": {"x":1141,"y":109,"w":17,"h":44},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":11,"y":2,"w":17,"h":44},
+	"sourceSize": {"w":32,"h":46}
+},
+"player/other/sil_female_mine":
+{
+	"frame": {"x":1420,"y":100,"w":25,"h":45},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":0,"w":25,"h":45},
+	"sourceSize": {"w":32,"h":45}
+},
+"player/other/sil_female_orange":
+{
+	"frame": {"x":1234,"y":104,"w":17,"h":44},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":11,"y":2,"w":17,"h":44},
+	"sourceSize": {"w":32,"h":46}
+},
+"player/other/sil_female_red":
+{
+	"frame": {"x":1591,"y":47,"w":17,"h":44},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":11,"y":2,"w":17,"h":44},
+	"sourceSize": {"w":32,"h":46}
+},
+"player/other/sil_female_sword":
+{
+	"frame": {"x":1471,"y":49,"w":32,"h":45},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":45},
+	"sourceSize": {"w":32,"h":45}
+},
+"player/other/sil_male":
+{
+	"frame": {"x":1280,"y":103,"w":24,"h":44},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":2,"w":24,"h":44},
+	"sourceSize": {"w":32,"h":46}
+},
+"player/other/sil_male_blue":
+{
+	"frame": {"x":1467,"y":99,"w":24,"h":44},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":2,"w":24,"h":44},
+	"sourceSize": {"w":32,"h":46}
+},
+"player/other/sil_male_forest":
+{
+	"frame": {"x":1536,"y":1,"w":29,"h":45},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":0,"w":29,"h":45},
+	"sourceSize": {"w":32,"h":45}
+},
+"player/other/sil_male_green":
+{
+	"frame": {"x":1539,"y":48,"w":24,"h":44},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":2,"w":24,"h":44},
+	"sourceSize": {"w":32,"h":46}
+},
+"player/other/sil_male_mine":
+{
+	"frame": {"x":1502,"y":1,"w":32,"h":45},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":45},
+	"sourceSize": {"w":32,"h":45}
+},
+"player/other/sil_male_orange":
+{
+	"frame": {"x":1565,"y":48,"w":24,"h":44},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":2,"w":24,"h":44},
+	"sourceSize": {"w":32,"h":46}
+},
+"player/other/sil_male_red":
+{
+	"frame": {"x":1567,"y":1,"w":24,"h":44},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":2,"w":24,"h":44},
+	"sourceSize": {"w":32,"h":46}
+},
+"player/other/sil_male_sword":
+{
+	"frame": {"x":1505,"y":48,"w":32,"h":45},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":45},
+	"sourceSize": {"w":32,"h":45}
+},
+"player/rest/female":
+{
+	"frame": {"x":1610,"y":46,"w":41,"h":32},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":34,"y":30,"w":41,"h":32},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/rest/male":
+{
+	"frame": {"x":1143,"y":1,"w":51,"h":33},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":28,"y":30,"w":51,"h":33},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/wood/female":
+{
+	"frame": {"x":1096,"y":1,"w":52,"h":45},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":36,"y":17,"w":52,"h":45},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/wood/female2":
+{
+	"frame": {"x":1146,"y":54,"w":47,"h":50},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":37,"y":14,"w":47,"h":50},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/wood/female4":
+{
+	"frame": {"x":482,"y":64,"w":61,"h":48},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":34,"y":17,"w":61,"h":48},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/wood/female6":
+{
+	"frame": {"x":195,"y":1,"w":63,"h":47},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":24,"y":17,"w":63,"h":47},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/wood/female8":
+{
+	"frame": {"x":1338,"y":51,"w":38,"h":48},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":40,"y":25,"w":38,"h":48},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/wood/male":
+{
+	"frame": {"x":1000,"y":1,"w":54,"h":46},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":34,"y":18,"w":54,"h":46},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/wood/male2":
+{
+	"frame": {"x":746,"y":1,"w":49,"h":57},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":35,"y":12,"w":49,"h":57},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/wood/male4":
+{
+	"frame": {"x":1,"y":1,"w":67,"h":46},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":31,"y":15,"w":67,"h":46},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/wood/male6":
+{
+	"frame": {"x":97,"y":1,"w":66,"h":47},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":15,"w":66,"h":47},
+	"sourceSize": {"w":100,"h":100}
+},
+"player/wood/male8":
+{
+	"frame": {"x":898,"y":58,"w":47,"h":55},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":39,"y":24,"w":47,"h":55},
+	"sourceSize": {"w":100,"h":100}
+}},
+"animations": {
+	"player/attack/female": ["player/attack/female2","player/attack/female4","player/attack/female6","player/attack/female8"],
+	"player/attack/male": ["player/attack/male2","player/attack/male4","player/attack/male6","player/attack/male8"],
+	"player/gather/female": ["player/gather/female2","player/gather/female4","player/gather/female6","player/gather/female8"],
+	"player/gather/male": ["player/gather/male2","player/gather/male4","player/gather/male6","player/gather/male8"],
+	"player/hunter/female": ["player/hunter/female2","player/hunter/female4","player/hunter/female6","player/hunter/female8"],
+	"player/hunter/male": ["player/hunter/male2","player/hunter/male4","player/hunter/male6","player/hunter/male8"],
+	"player/mine/female": ["player/mine/female2","player/mine/female4","player/mine/female6","player/mine/female8"],
+	"player/mine/male": ["player/mine/male2","player/mine/male4","player/mine/male6","player/mine/male8"],
+	"player/move/female": ["player/move/female1","player/move/female2","player/move/female3","player/move/female4","player/move/female6","player/move/female7","player/move/female8","player/move/female9"],
+	"player/move/male": ["player/move/male1","player/move/male2","player/move/male3","player/move/male4","player/move/male6","player/move/male7","player/move/male8","player/move/male9"],
+	"player/wood/female": ["player/wood/female2","player/wood/female4","player/wood/female6","player/wood/female8"],
+	"player/wood/male": ["player/wood/male2","player/wood/male4","player/wood/male6","player/wood/male8"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "player.png",
+	"format": "RGBA8888",
+	"size": {"w":1675,"h":128},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:5de63c101aecfbec3698f12dfd9d4dc4:658bcd524bb45c1a5131a9b0f316f4ee:86d5339b780aedd87b35e2b7c0a7e11b$"
+}
+}

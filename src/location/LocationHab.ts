@@ -7,7 +7,7 @@ export class LocationHab extends Location {
     tileSize:number = 102;
 
     constructor(weight, height, warps,area) {
-        super(warps);
+        super(warps,weight, height);
 
         for (let i = 0; i < weight; i ++) {
             for (let j = 0; j < height; j ++) {
@@ -26,4 +26,6 @@ export class LocationHab extends Location {
         }
 
     }
+
+
 }

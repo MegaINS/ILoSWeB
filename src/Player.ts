@@ -6,7 +6,7 @@ export class Player extends PIXI.Sprite{
     items;
 
     constructor() {
-        super(Resources.player);
+        super(Resources.player.male);
     }
 
 }
