@@ -6,10 +6,10 @@ export class LocationHab extends Location {
 
     tileSize:number = 102;
 
-    constructor(weight, height, warps,area) {
-        super(warps,weight, height);
+    constructor(game, width, height, warps,area) {
+        super(game, warps,width, height, new Array<number>(width * height).fill(0));
 
-        for (let i = 0; i < weight; i ++) {
+        for (let i = 0; i < width; i ++) {
             for (let j = 0; j < height; j ++) {
                 let sprite = new PIXI.Sprite(Resources.danges[area][0].paths[15]);
                 sprite.setTransform( i * this.tileSize,j * this.tileSize);

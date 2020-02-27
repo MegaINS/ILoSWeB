@@ -15,21 +15,21 @@ export abstract class Location extends PIXI.Container{
     enemys = [];
 
     player:Player;
-    tileMap:number[][];
+    tileMap:number[];
     tileSprites = [];
     nextTile;
     moved = false;
 
 
-    protected constructor(warps, width, height) {
+    protected constructor(game,warps, width, height , tileMap) {
         super();
         this.widthLoc = width;
         this.heightLoc = height;
         this.warps = warps;
         this.zIndex = -1;
         this.interactive = true;
-
-        this.tileMap = new Array<number>(this.widthLoc).fill(0).map(() => new Array<number>(this.heightLoc).fill(0));
+        this.player = game.player;
+        this.tileMap = tileMap;
     }
 
     click = () => {
@@ -38,8 +38,8 @@ export abstract class Location extends PIXI.Container{
             Network.sendPacket('action', {
                 action: 'CLICK',
                 data: [
-                    Math.floor( this.nextTile.x / this.tileSize),
-                    Math.floor(this.nextTile.y / this.tileSize)
+                    Math.floor( (this.nextTile.x - this.player.x) / this.tileSize),
+                    Math.floor((this.nextTile.y - this.player.y)/ this.tileSize)
                 ]
             });
             this.moved = true;
@@ -104,31 +104,34 @@ export abstract class Location extends PIXI.Container{
 
 
 
-         let tempMap = new Array<number>(this.widthLoc).fill(0).map(() => new Array<number>(this.heightLoc).fill(0));
+         let tempMap = new Array<number>(this.widthLoc * this.heightLoc).fill(0);
 
 
          let loop = 1;
          let end = false;
-         tempMap[tX][tY] = -1;
-         tempMap[pX][pY] = loop;
+         tempMap[tX + tY * this.heightLoc] = -1;
+         tempMap[pX + pY * this.heightLoc] = loop;
 
         let stop = 0;
         while (!end && stop<200){
             for (let x = 0; x < this.widthLoc && !end ; x++) {
                 for (let y = 0; y < this.heightLoc  && !end; y++) {
-                    if(tempMap[x][y] == loop ){
+                    if(tempMap[x + y * this.heightLoc ] == loop ){
                         for (let x1 = x-1; x1 < x+2  && !end; x1++) {
                             for (let y1 = y-1; y1 < y+2  && !end; y1++) {
                                 if(x1>=0 && y1>=0&&
                                     x1<this.widthLoc && y1<this.heightLoc){
-                                    if(tempMap[x1][y1] == -1){
+                                    if(tempMap[x1 + y1 * this.heightLoc ] == -1){
                                         loop--;
                                         end = true;
                                     }
 
-                                    if(tempMap[x1][y1] == 0){
-                                        tempMap[x1][y1] = loop+1;
+                                    if(this.tileMap[x1 + y1 * this.heightLoc] == 0){
+                                        if(tempMap[x1 + y1 * this.heightLoc ] == 0){
+                                            tempMap[x1 + y1 * this.heightLoc ] = loop+1;
+                                        }
                                     }
+
                                 }
                             }
                         }
@@ -141,37 +144,45 @@ export abstract class Location extends PIXI.Container{
 
         stop = 0;
         let road = [];
-        road.push({x:tX,y:tY});
-        end = false;
+        if(end){
+            road.push({x:tX,y:tY});
 
-        while (loop != 1 && stop<200){
-            let tile = road[road.length - 1];
             end = false;
-            for (let x = tile.x-1; x < tile.x+2  && !end; x++) {
-                for (let y = tile.y-1; y < tile.y+2  && !end; y++) {
-                    if(x>=0 && y>=0&&
-                        x<this.widthLoc && y<this.heightLoc){
-                        if(tempMap[x][y] == loop){
-                            road.push({x:x,y:y});
-                            end = true;
+
+            while (loop != 1 && stop<200){
+                let tile = road[road.length - 1];
+                end = false;
+                for (let x = tile.x-1; x < tile.x+2  && !end; x++) {
+                    for (let y = tile.y-1; y < tile.y+2  && !end; y++) {
+                        if(x>=0 && y>=0&&
+                            x<this.widthLoc && y<this.heightLoc){
+                            if(tempMap[x + y * this.heightLoc] == loop){
+                                road.push({x:x,y:y});
+                                end = true;
+                            }
                         }
                     }
                 }
+                loop--;
+                stop++;
             }
-            loop--;
-            stop++;
+
+
+            while (road.length){
+                let tile = road.pop();
+                let tileS =  new PIXI.Sprite(Resources.cursors.pointer);
+                tileS.x = tile.x * this.tileSize;
+                tileS.y = tile.y * this.tileSize;
+                this.tileSprites.push(tileS);
+                tileS.zIndex = 9;
+                this.addChild(tileS);
+            }
+
+
+
         }
 
 
-        while (road.length){
-            let tile = road.pop();
-            let tileS =  new PIXI.Sprite(Resources.cursors.pointer);
-            tileS.x = tile.x * this.tileSize;
-            tileS.y = tile.y * this.tileSize;
-            this.tileSprites.push(tileS);
-            tileS.zIndex = 9;
-            this.addChild(tileS);
-        }
 
 
 
@@ -190,16 +201,15 @@ export abstract class Location extends PIXI.Container{
         }
     };
 
-    spawn(player, x, y) {
-        this.player = player;
-        player.x = x * this.tileSize;
-        player.y = y * this.tileSize;
-        this.addChild(player);
+    spawn(x, y) {
+        this.player.x = x * this.tileSize;
+        this.player.y = y * this.tileSize;
+        this.addChild(this.player);
     }
 
-    move(player, x, y) {
-        player.x = x * this.tileSize;
-        player.y = y * this.tileSize;
+    move(x, y) {
+        this.player.x = x * this.tileSize;
+        this.player.y = y * this.tileSize;
         this.removeChild(this.nextTile);
         this.click();
     }
@@ -236,6 +246,11 @@ export abstract class Location extends PIXI.Container{
 
     update(x:number,y:number):void{
 
+    }
+
+    actionComplete():void{
+        this.removeChild(this.nextTile);
+        this.click();
     }
 
 }

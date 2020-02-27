@@ -6,16 +6,13 @@ import * as PIXI from 'pixi.js'
 export class LocationMine extends Location {
 
     tileSize: number = 102;
-    tile ;
     resources ;
     sprites;
     area ;
 
-    constructor(width, height, warps, tile, resources,area) {
-        super(warps, width, height);
+    constructor(game, width, height, warps, tileMap, resources, area) {
+        super(game, warps, width, height, tileMap);
 
-
-        this.tile = tile;
         this.resources = resources;
         this.area = area;
         this.sprites = [];
@@ -63,32 +60,34 @@ export class LocationMine extends Location {
 
     update(x, y) {
 
-        this.tile[x + y * this.heightLoc] = 0;
+        this.tileMap[x + y * this.heightLoc] = 0;
 
         this.setSpriteTex(x, y);
-        if (x - 1 > -1 && this.tile[x-1 + y * this.heightLoc] === 0 ) this.setSpriteTex(x - 1, y);
+        if (x - 1 > -1 && this.tileMap[x-1 + y * this.heightLoc] === 0 ) this.setSpriteTex(x - 1, y);
 
-        if (x + 1 < this.widthLoc && this.tile[x+1 + y * this.heightLoc] === 0) this.setSpriteTex(x + 1, y);
-        if (y - 1 > -1 && this.tile[x + (y-1) * this.heightLoc] === 0) this.setSpriteTex(x, y - 1);
-        if (y + 1 < this.heightLoc && this.tile[x + (y+1) * this.heightLoc] === 0) this.setSpriteTex(x, y + 1);
+        if (x + 1 < this.widthLoc && this.tileMap[x+1 + y * this.heightLoc] === 0) this.setSpriteTex(x + 1, y);
+        if (y - 1 > -1 && this.tileMap[x + (y-1) * this.heightLoc] === 0) this.setSpriteTex(x, y - 1);
+        if (y + 1 < this.heightLoc && this.tileMap[x + (y+1) * this.heightLoc] === 0) this.setSpriteTex(x, y + 1);
 
         let resource = this.resources.find(r => r.x === x && r.y === y);
         if (resource != null) {
             this.removeChild(resource.sprite);
             this.resources.splice(this.resources.indexOf(resource),1);
         }
+
+
     }
 
     setSpriteTex = (x, y)=> {
-        let isFullCenter = this.tile[x + y * this.heightLoc] > 0;
+        let isFullCenter = this.tileMap[x + y * this.heightLoc] > 0;
         let tex;
         if (isFullCenter) {
             tex = Resources.danges[this.area][0].full[this.getRandomInt(0, Resources.danges[this.area][0].full.length)];
         } else {
-            let isFullUp = this.tile[x + (y - 1) * this.heightLoc] == 0;
-            let isFullDown = this.tile[x + (y + 1) * this.heightLoc] == 0;
-            let isFullLeft = this.tile[(x - 1) + y * this.heightLoc] == 0;
-            let isFullRight = this.tile[(x + 1) + y * this.heightLoc] == 0;
+            let isFullUp = this.tileMap[x + (y - 1) * this.heightLoc] == 0;
+            let isFullDown = this.tileMap[x + (y + 1) * this.heightLoc] == 0;
+            let isFullLeft = this.tileMap[(x - 1) + y * this.heightLoc] == 0;
+            let isFullRight = this.tileMap[(x + 1) + y * this.heightLoc] == 0;
 
             let index = (isFullUp ? 8 : 0) + (isFullDown ? 4 : 0) + (isFullLeft ? 2 : 0) + (isFullRight ? 1 : 0);
 
@@ -99,4 +98,5 @@ export class LocationMine extends Location {
     getRandomInt(min, max) {
         return Math.floor(Math.random() * (max - min)) + min;
     }
+
 }

@@ -34,6 +34,8 @@ export class Network {
         this.socket.on('loadPlayersList', this.loadPlayersList);
         this.socket.on('addPlayer', this.addPlayerInPlayersList);
         this.socket.on('removePlayer', this.removePlayerWithPlayersList);
+        this.socket.on('actionComplete', this.actionComplete);
+
     }
 
     private loadPlayersList =(data)  =>{
@@ -77,13 +79,13 @@ export class Network {
         let location;
         switch (data.locationType) {
             case "OPEN":
-                location = new LocationMap(data.src, data.warps,data.weight, data.height,);
+                location = new LocationMap(this.game, data.src, data.warps,data.weight, data.height,);
                 break;
             case "HAB":
-                location = new LocationHab(data.weight, data.height, data.warps, data.area);
+                location = new LocationHab(this.game, data.weight, data.height, data.warps, data.area);
                 break;
             case "MINE":
-                location = new LocationMine(data.weight, data.height, data.warps, data.tile, data.resources, data.mineType.toLowerCase());
+                location = new LocationMine(this.game, data.weight, data.height, data.warps, data.tile, data.resources, data.mineType.toLowerCase());
                 break;
             default:
                 console.log(data.locationType);
@@ -98,10 +100,22 @@ export class Network {
 
         switch (data.action) {
             case "SPAWN":
-                this.game.gui.location.spawn(this.game.player, data.x, data.y);
+                this.game.gui.location.spawn(data.x, data.y);
                 break;
             case "MOVE":
-                this.game.gui.location.move(this.game.player, data.x, data.y);
+                this.game.gui.location.move(data.x, data.y);
+                break;
+            default:
+                console.log(data.action);
+        }
+        this.game.gui.update();
+    };
+
+    private actionComplete =(data) =>{
+        this.chat.addMessage("<font color='#FF0000'>"+data.action+"</font>");
+        switch (data.action) {
+            case "CLICK":
+                this.game.gui.location.actionComplete();
                 break;
             default:
                 console.log(data.action);
