@@ -248,10 +248,7 @@ export abstract class Location extends PIXI.Container{
 
     }
 
-    actionComplete():void{
-        this.removeChild(this.nextTile);
-        this.click();
-    }
+
 
 }
 

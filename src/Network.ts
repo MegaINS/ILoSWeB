@@ -34,7 +34,6 @@ export class Network {
         this.socket.on('loadPlayersList', this.loadPlayersList);
         this.socket.on('addPlayer', this.addPlayerInPlayersList);
         this.socket.on('removePlayer', this.removePlayerWithPlayersList);
-        this.socket.on('actionComplete', this.actionComplete);
 
     }
 
@@ -111,17 +110,6 @@ export class Network {
         this.game.gui.update();
     };
 
-    private actionComplete =(data) =>{
-        this.chat.addMessage("<font color='#FF0000'>"+data.action+"</font>");
-        switch (data.action) {
-            case "CLICK":
-                this.game.gui.location.actionComplete();
-                break;
-            default:
-                console.log(data.action);
-        }
-        this.game.gui.update();
-    };
 
     private enemyUpdate =(data) =>{
         console.log('<span class="username-msg">EnemyUpdate:</span> ' + data.action);
