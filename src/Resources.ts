@@ -24,6 +24,7 @@ export abstract class Resources {
     static chat;
     static bottom;
     static userList;
+    static books = [];
 
 
     static load(loader: Loader, resources: Partial<Record<string, LoaderResource>>) {
@@ -42,6 +43,8 @@ export abstract class Resources {
         let userList = resources['userList'];
         let cursors = resources['cursors'];
         let player = resources['player'];
+        let books = resources['books'];
+
 
         const basePath = '/assets/img/';
 
@@ -234,6 +237,9 @@ export abstract class Resources {
                 },
                 skillList: {
                     bg: userInfo.textures['skill_list/bg.png'],
+                    bar: userInfo.textures['skill_list/bar.png'],
+                    bg_bar: userInfo.textures['skill_list/bg_bar.png'],
+
 
                     orange: {
                         bg_1: userInfo.textures['skill_list/orange/bg_1.png'],
@@ -414,6 +420,10 @@ export abstract class Resources {
         for (let i = 0; i < 137; i++) {
             this.materials['materials-' + i] = materials.textures['materials-' + i + '.png'];
         }
+        for (let i = 0; i < 97; i++) {
+            this.books['books-' + i] = books.textures['books-' + i + '.png'];
+        }
+
         for (let i = 0; i < 9; i++) {
             this.itemLayers[i] = itemLayers.textures['class' + i + '.png'];
         }

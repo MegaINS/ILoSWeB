@@ -1,10 +1,6 @@
 import {Resources} from "../Resources";
 import {Button} from "../Button";
-
-
-
-
-
+import {Skill} from "./Skill";
 
 
 export class Profile extends PIXI.Container {
@@ -109,11 +105,35 @@ export class Profile extends PIXI.Container {
         }
     }
 
+    skills = {};
+
+    loadSkills(skillsData) {
+        this.scrollingContainerSkills.innerContainer.removeChildren();
+        let skillsArr=[];
+        skillsArr[0] =  skillsData.filter((a)=>a.skillType==="attack")
+        skillsArr[1] =  skillsData.filter((a)=>a.skillType==="mine")
+        skillsArr[2] =  skillsData.filter((a)=>a.skillType==="production")
+        var y = 0;
+        for (let i = 0; i < skillsArr.length; i++) {
+            let skills = skillsArr[i];
+            for (let k = 0; k < skills.length; k++) {
+
+                let skill = new Skill(skills[k])
+
+                skill.y = y;
+                this.scrollingContainerSkills.addChild(skill)
+                this.skills[skills[k].name] = skill
+                y+=46;
+            }
+        }
+    }
+
+    scrollingContainerSkills: PIXI.UI.ScrollingContainer;
 
     initSkills() {
 
 
-        let scrollingContainer = new PIXI.UI.ScrollingContainer({
+        this.scrollingContainerSkills = new PIXI.UI.ScrollingContainer({
             width: 400,
             height: 280,
             scrollX: false,
@@ -122,9 +142,9 @@ export class Profile extends PIXI.Container {
 
 
         var scrollbar = new PIXI.UI.ScrollBar({
-            track: new PIXI.UI.TilingSprite(Resources.scroll.bar_bg_vertical, 13,1),
-            handle: new PIXI.UI.TilingSprite(Resources.scroll.bar_thumb_vert2, 13,1),
-            scrollingContainer: scrollingContainer,
+            track: new PIXI.UI.TilingSprite(Resources.scroll.bar_bg_vertical, 13, 1),
+            handle: new PIXI.UI.TilingSprite(Resources.scroll.bar_thumb_vert2, 13, 1),
+            scrollingContainer: this.scrollingContainerSkills,
             vertical: true,
             autohide: true
         });
@@ -133,74 +153,11 @@ export class Profile extends PIXI.Container {
         scrollbar.anchorTop = 0;
         scrollbar.anchorRight = 0;
 
-
-        var y = 0;
-        var orangBg_1 = new PIXI.UI.Sprite(Resources.userInfo.profile.skillList.orange.bg_1);
-        scrollingContainer.addChild(orangBg_1);
-        y += 46;
-        for (var i = 0; i < 3; i++) {
-            var orangBg_2 = new PIXI.UI.Sprite(Resources.userInfo.profile.skillList.orange.bg_2);
-            if (i > 0) {
-                y += 40;
-            }
-
-            orangBg_2.y = y;
-
-
-            scrollingContainer.addChild(orangBg_2);
-        }
-        y += 40;
-
-        var redBg_1 = new PIXI.UI.Sprite(Resources.userInfo.profile.skillList.red.bg_1);
-        scrollingContainer.addChild(redBg_1);
-        redBg_1.y = y;
-        y += 46;
-        for (var i = 0; i < 3; i++) {
-            var redBg_2 = new PIXI.UI.Sprite(Resources.userInfo.profile.skillList.red.bg_2);
-            if (i > 0) {
-                y += 40;
-            }
-            redBg_2.y = y;
-
-
-            scrollingContainer.addChild(redBg_2);
-        }
-        y += 40;
-
-        var blueBg_1 = new PIXI.UI.Sprite(Resources.userInfo.profile.skillList.blue.bg_1);
-        scrollingContainer.addChild(blueBg_1);
-        blueBg_1.y = y;
-        y += 46;
-        for (var i = 0; i < 3; i++) {
-            var blueBg_2 = new PIXI.UI.Sprite(Resources.userInfo.profile.skillList.blue.bg_2);
-            if (i > 0) {
-                y += 40;
-            }
-            blueBg_2.y = y;
-            scrollingContainer.addChild(blueBg_2);
-        }
-        y += 40;
-        var greenBg_1 = new PIXI.UI.Sprite(Resources.userInfo.profile.skillList.green.bg_1);
-        scrollingContainer.addChild(greenBg_1);
-        greenBg_1.y = y;
-        y += 46;
-        for (var i = 0; i < 3; i++) {
-            var greenBg_2 = new PIXI.UI.Sprite(Resources.userInfo.profile.skillList.green.bg_2);
-            if (i > 0) {
-                y += 40;
-            }
-            greenBg_2.y = y;
-            scrollingContainer.addChild(greenBg_2);
-        }
-
-
         var uiStage = new PIXI.UI.Stage(400, 280);
         uiStage.y = 190;
         uiStage.x = 10;
 
-        uiStage.addChild(scrollingContainer);
-        uiStage.addChild(scrollbar);
-
+        uiStage.addChild(this.scrollingContainerSkills, scrollbar);
 
         return uiStage;
     }
@@ -216,8 +173,8 @@ export class Profile extends PIXI.Container {
         });
 
         var scrollbar = new PIXI.UI.ScrollBar({
-            track: new PIXI.UI.TilingSprite(Resources.scroll.bar_bg_vertical, 13,1),
-            handle: new PIXI.UI.TilingSprite(Resources.scroll.bar_thumb_vert2, 13,1),
+            track: new PIXI.UI.TilingSprite(Resources.scroll.bar_bg_vertical, 13, 1),
+            handle: new PIXI.UI.TilingSprite(Resources.scroll.bar_thumb_vert2, 13, 1),
             scrollingContainer: scrollingContainer,
             vertical: true,
             autohide: false
@@ -255,8 +212,8 @@ export class Profile extends PIXI.Container {
         });
 
         var scrollbar = new PIXI.UI.ScrollBar({
-            track: new PIXI.UI.TilingSprite(Resources.scroll.bar_bg_vertical, 13,1),
-            handle: new PIXI.UI.TilingSprite(Resources.scroll.bar_thumb_vert2, 13,1),
+            track: new PIXI.UI.TilingSprite(Resources.scroll.bar_bg_vertical, 13, 1),
+            handle: new PIXI.UI.TilingSprite(Resources.scroll.bar_thumb_vert2, 13, 1),
             scrollingContainer: scrollingContainer,
             vertical: true,
             autohide: false
@@ -294,8 +251,8 @@ export class Profile extends PIXI.Container {
         });
 
         var scrollbar = new PIXI.UI.ScrollBar({
-            track: new PIXI.UI.TilingSprite(Resources.scroll.bar_bg_vertical, 13,1),
-            handle: new PIXI.UI.TilingSprite(Resources.scroll.bar_thumb_vert2, 13,1),
+            track: new PIXI.UI.TilingSprite(Resources.scroll.bar_bg_vertical, 13, 1),
+            handle: new PIXI.UI.TilingSprite(Resources.scroll.bar_thumb_vert2, 13, 1),
             scrollingContainer: scrollingContainer,
             vertical: true,
             autohide: false

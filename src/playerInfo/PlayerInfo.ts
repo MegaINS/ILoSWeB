@@ -202,4 +202,6 @@ export class PlayerInfo extends PIXI.Container {
 
 
     }
+
+
 }

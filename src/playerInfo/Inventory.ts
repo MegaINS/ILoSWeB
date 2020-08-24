@@ -1,12 +1,18 @@
 import {Resources} from "../Resources";
 import {Button} from "../Button";
 import {Item} from "../Item";
+import {Network} from "../Network";
 
 
 
 export  class Inventory extends PIXI.Container {
     itemSelected;
     scrollingContainer;
+    bWear;
+    bTakeoff;
+    bUse;
+    bDrop;
+
     constructor() {
         super();
 
@@ -54,29 +60,37 @@ export  class Inventory extends PIXI.Container {
 
         uiStage.addChild(this.scrollingContainer, scrollbar);
 
-        var bWear = new Button(Resources.userInfo.inventory.wear, () => {
-
+        this.bWear = new Button(Resources.userInfo.inventory.wear, () => {
+            Network.sendPacket("inventoryAction",{action:"TAKE",id:this.itemSelected.id})
         });
-        bWear.x = 25;
 
-        var bTakeoff = new Button(Resources.userInfo.inventory.takeoff, () => {
+        this.bWear.x = 25;
 
+        this.bTakeoff = new Button(Resources.userInfo.inventory.takeoff, () => {
+            Network.sendPacket("inventoryAction",{action:"TAKEOFF",id:this.itemSelected.id})
         });
-        bTakeoff.x = 100;
 
-        var bUse = new Button(Resources.userInfo.inventory.use, () => {
+        this.bTakeoff.x = 100;
 
+        this.bUse = new Button(Resources.userInfo.inventory.use, () => {
+            Network.sendPacket("inventoryAction",{action:"USE",id:this.itemSelected.id})
         });
-        bUse.x = 180;
 
-        var bDrop = new Button(Resources.userInfo.inventory.drop, () => {
+        this.bUse.x = 180;
 
+        this.bDrop = new Button(Resources.userInfo.inventory.drop, () => {
+            Network.sendPacket("inventoryAction",{action:"DROP",id:this.itemSelected.id})
         });
-        bDrop.x = 305;
-        bWear.y = bTakeoff.y = bUse.y = bDrop.y = 450;
 
+        this.bDrop.x = 305;
+        this.bWear.y = this.bTakeoff.y = this.bUse.y = this.bDrop.y = 450;
 
-        this.addChild(text, bgScroll, uiStage, bWear, bTakeoff, bUse, bDrop);
+        this.bWear.state(false);
+        this.bTakeoff.state(false);
+        this.bUse.state(false);
+        this.bDrop.state(false);
+
+        this.addChild(text, bgScroll, uiStage, this.bWear, this.bTakeoff, this.bUse, this.bDrop);
 
     }
 
@@ -93,12 +107,38 @@ export  class Inventory extends PIXI.Container {
                 if(this.itemSelected === itemSprite){
                     itemSprite.selection(false);
                     this.itemSelected = null;
+
+                    this.bWear.state(false);
+                    this.bTakeoff.state(false);
+                    this.bUse.state(false);
+                    this.bDrop.state(false);
                 }else {
                     if(this.itemSelected != null){
                         this.itemSelected.selection(false);
                     }
                     itemSprite.selection(true);
                     this.itemSelected = itemSprite;
+
+                    switch (item.itemAction) {
+                        case "use":
+                            this.bUse.state(true);
+                            this.bWear.state(false);
+                            this.bTakeoff.state(false);
+                            break;
+                        case 'take':
+                            this.bUse.state(false);
+                            this.bWear.state(true);
+                            this.bTakeoff.state(false);
+                            break;
+                        default:
+                            this.bUse.state(false);
+                            this.bWear.state(false);
+                            this.bTakeoff.state(false);
+                            break;
+                    }
+
+
+                    this.bDrop.state(true);
                 }
             };
 

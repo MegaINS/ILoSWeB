@@ -35,6 +35,8 @@ export class Network {
         this.socket.on('addPlayer', this.addPlayerInPlayersList);
         this.socket.on('removePlayer', this.removePlayerWithPlayersList);
 
+        this.socket.on('loadPlayerSkills', this.loadPlayerSkills);
+
     }
 
     private loadPlayersList =(data)  =>{
@@ -62,6 +64,9 @@ export class Network {
         this.chat.addMessage('<font color="#FFA500">' + data.userName + ':</font> ' + data.message);
     };
 
+    private loadPlayerSkills =(data)  =>{
+        this.game.gui.userInfo.sections["profile"].loadSkills(data.skills)
+    };
 
     private loadPlayerInfo = (data) =>{
         for (let i in data) {

@@ -44,9 +44,23 @@ export class Item extends PIXI.UI.Container{
         var textAmount = new PIXI.UI.Text(item.amount+" шт", style);
         textAmount.anchorRight = 15;
         textAmount.y = 4;
-        var material = new PIXI.UI.Sprite(Resources.materials[item.scr]);
+
+        console.log(item.itemType)
+        var material;
+        switch (item.itemType) {
+            case "material":
+                material = new PIXI.UI.Sprite(Resources.materials[item.scr]);
+                break;
+            case "book":
+                material = new PIXI.UI.Sprite(Resources.books[item.scr]);
+                break;
+            default:
+                material = new PIXI.UI.Sprite(Resources.materials[" materials-10"]);
+
+        }
         material.x = 2;
         material.y = 1;
+
 
         var itemLayers = new PIXI.UI.Sprite(Resources.itemLayers[item.itemClass]);
         itemLayers.x = 2;

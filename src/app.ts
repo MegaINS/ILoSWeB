@@ -38,6 +38,8 @@ export class ILoSGame {
             .add('userList', '/assets/img/json/userList.json')
             .add('cursors', '/assets/img/json/cursors.json')
             .add('player', '/assets/img/json/player.json')
+            .add('books', '/assets/img/json/books.json')
+            .add('items', '/assets/img/json/items.json')
             .load(this.init);
 
     };
